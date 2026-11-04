@@ -16,7 +16,7 @@ A Client Admin must have turned on **Allow AI assistants** for your workspace, u
 On Team and Enterprise, an admin adds the connector.
 
 Le Chat's menus change often. If yours look different, see
-[Mistral's guide to custom connectors](https://help.mistral.ai/en/articles/393572-configuring-a-custom-connector).
+[Mistral's guide to MCP connectors](https://docs.mistral.ai/vibe/work/connectors/mcp-connectors).
 
 ## Choose what it may do
 
