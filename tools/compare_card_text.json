@@ -1,0 +1,33 @@
+{
+    "name": "compare_card_text",
+    "title": "Compare card text",
+    "description": "Diff new wording against a card's live text. Saves nothing. Without `card_id`, `field` is `persona.instructions` or `persona.guardrails`.",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            },
+            "card_id": {
+                "type": "integer"
+            },
+            "field": {
+                "type": "string"
+            },
+            "new_text": {
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "flow_id",
+            "field",
+            "new_text"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

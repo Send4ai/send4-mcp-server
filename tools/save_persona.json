@@ -1,0 +1,49 @@
+{
+    "name": "save_persona",
+    "title": "Create or change a persona",
+    "description": "Create a persona (no `persona_id`) or change one (`persona_id` and only the fields that change; null\nclears a field, `name` cannot be cleared). A persona used by a live flow cannot be changed here, because\nits words would reach the next customer: create a new one and attach it to a draft copy.",
+    "inputSchema": {
+        "properties": {
+            "persona_id": {
+                "type": "integer"
+            },
+            "name": {
+                "type": "string"
+            },
+            "role_line": {
+                "type": "string"
+            },
+            "instructions": {
+                "type": "string"
+            },
+            "guardrails": {
+                "type": "string"
+            },
+            "behavior_rules": {
+                "items": {
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "tone": {
+                "type": "string"
+            },
+            "language": {
+                "type": "string"
+            },
+            "avatar_emoji": {
+                "type": "string"
+            },
+            "avatar_color": {
+                "type": "string"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": false
+    }
+}

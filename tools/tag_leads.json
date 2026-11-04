@@ -1,0 +1,74 @@
+{
+    "name": "tag_leads",
+    "title": "Tag or untag leads",
+    "description": "Add tags to leads or take them off. Pick leads by id (`lead_ids`, up to 1,000) or as everyone matching the\n`list_leads` filters (`matching`, with the `expected_count` you saw as `total`; if the number changed the\ncall is refused). Name tags by id or give one `tag_name`, which is created when it does not exist.",
+    "inputSchema": {
+        "properties": {
+            "action": {
+                "enum": [
+                    "add",
+                    "remove"
+                ],
+                "type": "string"
+            },
+            "lead_ids": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "matching": {
+                "properties": {
+                    "expected_count": {
+                        "type": "integer"
+                    },
+                    "filters": {
+                        "properties": {
+                            "search": {
+                                "type": "string"
+                            },
+                            "tag_ids": {
+                                "items": {
+                                    "type": "integer"
+                                },
+                                "type": "array"
+                            },
+                            "source": {
+                                "enum": [
+                                    "import",
+                                    "other"
+                                ],
+                                "type": "string"
+                            },
+                            "sms": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "tag_ids": {
+                "description": "Up to 10.",
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "tag_name": {
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "action"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "get_account_usage",
+    "title": "Plan usage this month",
+    "description": "Usage against the plan for one calendar month in UTC (default: the month in progress, which is partial):\nmessages sent and received, AI actions, seats and channels, each with its cap, what is left, and whether\nthat cap is enforced. `definitions` says what each meter counts. ",
+    "inputSchema": {
+        "properties": {
+            "month": {
+                "description": "The calendar month to report, as YYYY-MM (for example 2026-09), interpreted in UTC. Omit it for the month in progress. A future month is refused.",
+                "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+                "type": "string"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

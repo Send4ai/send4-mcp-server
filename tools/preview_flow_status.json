@@ -1,0 +1,30 @@
+{
+    "name": "preview_flow_status",
+    "title": "Preview switching a flow on or off",
+    "description": "What switching a flow on (`active`) or a live flow off (`inactive`) would do, without doing it: a `summary` and a\n`confirmation` code valid for 10 minutes for `set_flow_status`. Switching on runs every check, and an error refuses\nit with the issues. The summary says who answers each way in, what a copy changed from its original, and whether\nit was rehearsed. ",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            },
+            "status": {
+                "enum": [
+                    "active",
+                    "inactive"
+                ],
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "flow_id",
+            "status"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": false
+    }
+}

@@ -13,6 +13,7 @@ This repository contains documentation and client configuration only. It does **
 ## Reference
 
 - [Tools](https://github.com/send4ai/send4-mcp-server/blob/main/docs/tools.md): every tool, grouped by the permission that allows it.
+- [Tool definitions](https://github.com/send4ai/send4-mcp-server/tree/main/tools): one JSON file per tool, exactly as the server describes it in `tools/list` (name, title, description, `inputSchema`, `annotations`).
 - [Permissions](https://github.com/send4ai/send4-mcp-server/blob/main/docs/permissions.md): the workspace switches, the sign-in choices and who can use what.
 - [Troubleshooting](https://github.com/send4ai/send4-mcp-server/blob/main/docs/troubleshooting.md)
 - [Example prompts](https://github.com/send4ai/send4-mcp-server/blob/main/examples/prompts.md)

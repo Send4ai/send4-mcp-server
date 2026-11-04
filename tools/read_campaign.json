@@ -1,0 +1,32 @@
+{
+    "name": "read_campaign",
+    "title": "Read a campaign",
+    "description": "One campaign: status and why it is paused, flow and sender, when it started, pace, sending hours, reply window, progress and\nresults. Recipients are not listed.",
+    "inputSchema": {
+        "properties": {
+            "campaign_id": {
+                "description": "From `list_campaigns`.",
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "campaign_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    },
+    "_meta": {
+        "ui": {
+            "resourceUri": "ui://resources/campaign-results-app",
+            "visibility": [
+                "model",
+                "app"
+            ]
+        }
+    }
+}

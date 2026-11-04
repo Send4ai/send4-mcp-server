@@ -1,0 +1,26 @@
+{
+    "name": "get_campaign_report",
+    "title": "Campaign report",
+    "description": "The report of one launched campaign: contacted, replied, booked and the goal; how each card's outcomes\ncame out; meetings and who booked each; opt-outs by how; spend at the workspace's price; a day-by-day\nseries; and, with `split_by`, the same split by one column of the list. A draft has no report.",
+    "inputSchema": {
+        "properties": {
+            "campaign_id": {
+                "type": "integer"
+            },
+            "split_by": {
+                "description": "A column of the campaign's list to split the results by. Its values come from the customer list, so this needs the \"Read conversation messages\" permission.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "campaign_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

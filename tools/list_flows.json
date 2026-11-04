@@ -1,0 +1,38 @@
+{
+    "name": "list_flows",
+    "title": "List flows",
+    "description": "The flows in this workspace, by name, 50 a page: id, name, status, persona, triggers (type and\nwhether each is on), card count, last change and link. `status` is the flow's own switch, not live activity:\nonly an `active` flow starts new runs. `total` counts every match, not this page. ",
+    "inputSchema": {
+        "properties": {
+            "search": {
+                "description": "Case-insensitive match on the flow name.",
+                "type": "string"
+            },
+            "status": {
+                "description": "Only flows with this status.",
+                "enum": [
+                    "draft",
+                    "active",
+                    "inactive"
+                ],
+                "type": "string"
+            },
+            "limit": {
+                "minimum": 1,
+                "maximum": 100,
+                "type": "integer"
+            },
+            "page": {
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

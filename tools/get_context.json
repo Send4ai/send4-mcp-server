@@ -1,0 +1,15 @@
+{
+    "name": "get_context",
+    "title": "Workspace and connection",
+    "description": "Which Send4 workspace this connection belongs to, its timezone, the signed-in person, what this connection may read\nand change, how to get what it may not, and what the terms in other answers mean.",
+    "inputSchema": {
+        "type": "object",
+        "properties": {}
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

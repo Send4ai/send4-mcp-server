@@ -1,0 +1,48 @@
+{
+    "name": "list_leads",
+    "title": "List leads",
+    "description": "The workspace's leads, newest first, 50 a page, filtered like the Leads page.\nAlso every tag with how many leads carry it. Phones and emails are always masked; names and list\ncolumns are shown only with the conversation-content permission. `total` counts every match, not this\npage.",
+    "inputSchema": {
+        "properties": {
+            "search": {
+                "type": "string"
+            },
+            "tag_ids": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "source": {
+                "enum": [
+                    "import",
+                    "other"
+                ],
+                "type": "string"
+            },
+            "sms": {
+                "enum": [
+                    "opted_out",
+                    "not_opted_out"
+                ],
+                "type": "string"
+            },
+            "limit": {
+                "minimum": 1,
+                "maximum": 100,
+                "type": "integer"
+            },
+            "page": {
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

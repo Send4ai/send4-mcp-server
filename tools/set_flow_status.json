@@ -1,0 +1,34 @@
+{
+    "name": "set_flow_status",
+    "title": "Switch a flow on or off",
+    "description": "Switch a flow on (`active`) or off (`inactive`), with the `confirmation` code from\n`preview_flow_status`. On, it answers real customers. Off, it stops answering them, and\nconversations already in it finish. A flow that is not live switches off without a code.  The answer's\n`still_answered_elsewhere` names any way in another live flow still answers.",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            },
+            "status": {
+                "enum": [
+                    "active",
+                    "inactive"
+                ],
+                "type": "string"
+            },
+            "confirmation": {
+                "description": "The code from `preview_flow_status`.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "flow_id",
+            "status"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true,
+        "idempotentHint": false
+    }
+}

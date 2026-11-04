@@ -141,6 +141,15 @@ These come with **Create email addresses**, for a Client Admin.
 No tool takes a mailbox password. To connect your own mailbox, use the page `get_mailbox_setup`
 links to.
 
+## Used by the in-chat views
+
+This one isn't offered to the assistant. The flow map that some assistants show in the chat calls
+it to redraw a flow while it's on screen.
+
+| Tool | What it does |
+| --- | --- |
+| `get_flow_map` | Draw one flow card by card, for the flow map view. |
+
 ## Ready-made requests
 
 Some assistants also offer these as commands. Each one is only a request to the assistant, so it

@@ -1,0 +1,36 @@
+{
+    "name": "create_flow",
+    "title": "Create a flow",
+    "description": "Create a new flow as a draft: blank, or from a template (`template_key` from `list_flow_templates`). A\ndraft answers nobody: build it with `edit_flow`, rehearse it with `rehearse_flow`, check it with\n`check_flow`, and switch it on with `set_flow_status` when the person agrees.",
+    "inputSchema": {
+        "properties": {
+            "name": {
+                "description": "Required for a blank flow.",
+                "type": "string"
+            },
+            "template_key": {
+                "type": "string"
+            },
+            "settings": {
+                "description": "Blank flows only: language, max_ai_replies and so on.",
+                "type": "object"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": false
+    },
+    "_meta": {
+        "ui": {
+            "resourceUri": "ui://resources/flow-map-app",
+            "visibility": [
+                "model",
+                "app"
+            ]
+        }
+    }
+}

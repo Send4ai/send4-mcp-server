@@ -1,0 +1,50 @@
+{
+    "name": "read_flow",
+    "title": "Read a flow",
+    "description": "One flow: settings, persona, triggers, and every card with its settings and where each outcome leads (`next`:\na card id, \"stop\" or \"flow:<id>\").  Trust `next`: outcomes can depend on settings. `complete: false` means the flow did not fit or you\nasked for less: every card and wire is there, but not all settings, which `card_ids` reads. A value shown as\n{\"redacted\": true, ...} is a recipient list, calendar, routing key or pasted sample, summarised on purpose.\n",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            },
+            "detail": {
+                "description": "`outline` leaves out card settings and persona text.",
+                "enum": [
+                    "full",
+                    "outline"
+                ],
+                "type": "string"
+            },
+            "card_ids": {
+                "description": "Only these cards keep their settings.",
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "include_variables": {
+                "description": "Also list the `{{ path }}` variables a card can use. `render_only` paths cannot be branched on.",
+                "type": "boolean"
+            }
+        },
+        "type": "object",
+        "required": [
+            "flow_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    },
+    "_meta": {
+        "ui": {
+            "resourceUri": "ui://resources/flow-map-app",
+            "visibility": [
+                "model",
+                "app"
+            ]
+        }
+    }
+}

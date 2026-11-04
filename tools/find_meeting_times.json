@@ -1,0 +1,35 @@
+{
+    "name": "find_meeting_times",
+    "title": "Find free meeting times",
+    "description": "The free times and the booking rules for a conversation's customer, from `from` for `days`\ndays, in the workspace's timezone. With `meeting_id` (from `list_meetings`) they are the\ntimes that meeting could move to. Nothing is booked.",
+    "inputSchema": {
+        "properties": {
+            "conversation_id": {
+                "type": "integer"
+            },
+            "meeting_id": {
+                "description": "The times this meeting could move to.",
+                "type": "integer"
+            },
+            "from": {
+                "description": "From this day, YYYY-MM-DD.",
+                "type": "string"
+            },
+            "days": {
+                "description": "How many days.",
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "conversation_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

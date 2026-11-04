@@ -1,0 +1,20 @@
+{
+    "name": "list_members",
+    "title": "Team members",
+    "description": "The people in this workspace. An admin sees each member's email, role, whether they are active, whether\ntheir invitation is pending, and when they were last seen. Anyone else sees the id and name of active\nmembers, as on their own dashboard.",
+    "inputSchema": {
+        "properties": {
+            "include_inactive": {
+                "description": "Admins only: include deactivated members. Defaults to false.",
+                "type": "boolean"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

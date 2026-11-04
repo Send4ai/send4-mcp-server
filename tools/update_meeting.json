@@ -1,0 +1,38 @@
+{
+    "name": "update_meeting",
+    "title": "Cancel or mark a meeting",
+    "description": "Cancel a meeting, or mark it `completed` or `no_show`. A cancel tells nobody unless `notify_customer: true`\nwith the `message`, which goes out straight away; if the customer cannot be reached, nothing is cancelled\nand the answer says why.",
+    "inputSchema": {
+        "properties": {
+            "meeting_id": {
+                "type": "integer"
+            },
+            "status": {
+                "enum": [
+                    "cancelled",
+                    "completed",
+                    "no_show"
+                ],
+                "type": "string"
+            },
+            "notify_customer": {
+                "type": "boolean"
+            },
+            "message": {
+                "description": "With notify_customer: the text the customer gets.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "meeting_id",
+            "status"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true,
+        "idempotentHint": true
+    }
+}

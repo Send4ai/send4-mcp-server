@@ -1,0 +1,22 @@
+{
+    "name": "take_over_conversation",
+    "title": "Take over from the AI",
+    "description": "Pause the AI on a conversation so a person answers: the flow stops replying and its timers stand down until `resume_ai`.",
+    "inputSchema": {
+        "properties": {
+            "conversation_id": {
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "conversation_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

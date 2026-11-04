@@ -1,0 +1,38 @@
+{
+    "name": "suggest_card_change",
+    "title": "Suggest a card change",
+    "description": "Store new wording for one card's text field, for a person to accept in the builder. Changes nothing live, so it also works on a live flow.",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            },
+            "card_id": {
+                "type": "integer"
+            },
+            "field": {
+                "type": "string"
+            },
+            "new_text": {
+                "type": "string"
+            },
+            "reason": {
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "flow_id",
+            "card_id",
+            "field",
+            "new_text",
+            "reason"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

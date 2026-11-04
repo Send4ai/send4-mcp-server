@@ -1,0 +1,88 @@
+{
+    "name": "get_drop_off",
+    "title": "Where people drop off",
+    "description": "The Drop-off page: where conversations stop. Without `flow_id`: every flow by how many ended runs dropped off, with its\nbiggest leak. With one: card by card, how many reached it, stopped there, and `why`. The last `window` days (default 30)\nor the range given, in UTC days. Rehearsals are left out.",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            },
+            "window": {
+                "enum": [
+                    7,
+                    30,
+                    90
+                ],
+                "type": "integer"
+            },
+            "from": {
+                "description": "YYYY-MM-DD",
+                "type": "string"
+            },
+            "to": {
+                "description": "Inclusive, at most 366 days after `from`.",
+                "type": "string"
+            },
+            "interval": {
+                "enum": [
+                    "day",
+                    "week",
+                    "month"
+                ],
+                "type": "string"
+            },
+            "compare": {
+                "type": "boolean"
+            },
+            "channel_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "campaign_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "assigned_user_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "trigger_type": {
+                "items": {
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "direction": {
+                "enum": [
+                    "inbound",
+                    "outbound"
+                ],
+                "type": "string"
+            },
+            "channel_type": {
+                "items": {
+                    "enum": [
+                        "sms",
+                        "email",
+                        "web_widget"
+                    ],
+                    "type": "string"
+                },
+                "type": "array"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

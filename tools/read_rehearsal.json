@@ -1,0 +1,26 @@
+{
+    "name": "read_rehearsal",
+    "title": "Read a rehearsal",
+    "description": "What a rehearsal has said: its messages (all, or those after `after_message_id`) and its run: status,\nthe card it is on, and `still_working` with `retry_in_seconds` while an answer is coming.",
+    "inputSchema": {
+        "properties": {
+            "conversation_id": {
+                "type": "integer"
+            },
+            "after_message_id": {
+                "description": "Only messages after this one.",
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "conversation_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "launch_campaign",
+    "title": "Launch a campaign",
+    "description": "Launch a draft campaign with the `confirmation` code from `preview_campaign_launch`: its\nflow starts with every recipient, by real SMS or email, which costs money.  A repeat with the same code answers the first result.",
+    "inputSchema": {
+        "properties": {
+            "campaign_id": {
+                "type": "integer"
+            },
+            "confirmation": {
+                "description": "The code from `preview_campaign_launch`.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "campaign_id",
+            "confirmation"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true,
+        "idempotentHint": false
+    }
+}

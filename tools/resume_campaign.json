@@ -1,0 +1,26 @@
+{
+    "name": "resume_campaign",
+    "title": "Resume a campaign",
+    "description": "Resume a paused campaign at its pace and in its sending hours. Refused while the reason it paused still\nholds, and the answer says which. One paused because too many emails bounced or were marked as spam\nresumes only with `acknowledge_health: true`, which is the person's decision.",
+    "inputSchema": {
+        "properties": {
+            "campaign_id": {
+                "type": "integer"
+            },
+            "acknowledge_health": {
+                "description": "Only after the person agreed to send anyway despite the bounce or complaint rate.",
+                "type": "boolean"
+            }
+        },
+        "type": "object",
+        "required": [
+            "campaign_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true,
+        "idempotentHint": true
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "list_card_types",
+    "title": "List card types",
+    "description": "Every type of card a flow can be built from, with a one-line summary. `category` narrows\nit, and `categories` lists the values. `legacy: true` means it can no longer be added.",
+    "inputSchema": {
+        "properties": {
+            "category": {
+                "description": "Return only the cards in one group. Must be one of the values in the `categories` key of this tool's own answer — call it once with no filter to see them.",
+                "type": "string"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

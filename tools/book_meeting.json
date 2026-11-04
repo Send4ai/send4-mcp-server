@@ -1,0 +1,35 @@
+{
+    "name": "book_meeting",
+    "title": "Book or move a meeting",
+    "description": "Book a meeting for a conversation's customer at `datetime` (e.g. \"2026-11-04 10:30\",\nworkspace time), or move their existing one (`meeting_id` from `list_meetings`). A time\noutside the booking rules needs `outside_rules_ok: true`; a time that clashes with another\nmeeting is always refused. Booking does not tell the customer.",
+    "inputSchema": {
+        "properties": {
+            "conversation_id": {
+                "type": "integer"
+            },
+            "datetime": {
+                "description": "The time to book.",
+                "type": "string"
+            },
+            "meeting_id": {
+                "description": "Move this meeting instead of booking a new one.",
+                "type": "integer"
+            },
+            "outside_rules_ok": {
+                "description": "The person agreed to a time outside the booking rules.",
+                "type": "boolean"
+            }
+        },
+        "type": "object",
+        "required": [
+            "conversation_id",
+            "datetime"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "name": "create_lead",
+    "title": "Add a lead",
+    "description": "Add one lead, optionally tagged. The phone is required; without a + it is read in the workspace's country\nunless `country` says otherwise. A number that is already a lead is refused. It sends nothing.",
+    "inputSchema": {
+        "properties": {
+            "phone": {
+                "type": "string"
+            },
+            "country": {
+                "description": "ISO 3166 two-letter code, e.g. LT.",
+                "type": "string"
+            },
+            "first_name": {
+                "type": "string"
+            },
+            "last_name": {
+                "type": "string"
+            },
+            "email": {
+                "type": "string"
+            },
+            "tag_ids": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            }
+        },
+        "type": "object",
+        "required": [
+            "phone"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": false
+    }
+}

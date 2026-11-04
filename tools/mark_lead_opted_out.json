@@ -1,0 +1,22 @@
+{
+    "name": "mark_lead_opted_out",
+    "title": "Stop texting a lead",
+    "description": "Mark a lead's number as opted out of SMS, for a customer who asked not to be texted in words other than STOP.\nNothing more is texted to it and campaigns skip it. Only a person can undo this, on the lead's page.",
+    "inputSchema": {
+        "properties": {
+            "lead_id": {
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "lead_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

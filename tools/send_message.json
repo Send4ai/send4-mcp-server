@@ -1,0 +1,27 @@
+{
+    "name": "send_message",
+    "title": "Reply to a customer",
+    "description": "Send a message to the customer as the signed-in person, on the conversation's own number or mailbox. It goes straight\naway and cannot be taken back. Writing into a conversation the AI is running takes it over until `resume_ai`.\nThe same text within 10 minutes is sent once: a repeat answers\n`already_sent`, or `in_progress` while the first has not finished. `sent_unfinished`: the customer got it but stopping\nthe AI failed, so repeat the call to finish.",
+    "inputSchema": {
+        "properties": {
+            "conversation_id": {
+                "type": "integer"
+            },
+            "body": {
+                "description": "The message, exactly as the customer should get it.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "conversation_id",
+            "body"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true,
+        "idempotentHint": true
+    }
+}

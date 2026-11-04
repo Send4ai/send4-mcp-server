@@ -1,0 +1,38 @@
+{
+    "name": "start_conversation",
+    "title": "Text someone first",
+    "description": "Send the first SMS to a lead (`lead_id`, `body`) or a typed number (`phone`, and the `confirmation` from\n`preview_new_conversation`, which sends the text it summarised), from `channel_id`. It goes straight away. The\nconversation is paused and belongs to the person until `resume_ai`. A number with an open conversation is refused,\nand the answer names it.",
+    "inputSchema": {
+        "properties": {
+            "channel_id": {
+                "type": "integer"
+            },
+            "lead_id": {
+                "description": "Either this and `body`…",
+                "type": "integer"
+            },
+            "body": {
+                "description": "The message, for a lead.",
+                "type": "string"
+            },
+            "phone": {
+                "description": "…or this and `confirmation`.",
+                "type": "string"
+            },
+            "confirmation": {
+                "description": "The code from `preview_new_conversation`.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "channel_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true,
+        "idempotentHint": false
+    }
+}

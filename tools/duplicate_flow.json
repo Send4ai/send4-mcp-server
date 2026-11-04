@@ -1,0 +1,31 @@
+{
+    "name": "duplicate_flow",
+    "title": "Duplicate a flow",
+    "description": "Copy a flow into a new draft in the same workspace.\n Texts, email and WordPress forms move over by themselves: while\nboth are live the original keeps answering, and switching it off hands them to the copy. A campaign\nkeeps the flow it was launched with. A webhook trigger gets a new address, a web chat trigger a new\nwidget and a private inbox a new address, so whatever sends to the old one has to be moved. `notes`\nsays what could not be carried over.",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "flow_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": false
+    },
+    "_meta": {
+        "ui": {
+            "resourceUri": "ui://resources/flow-map-app",
+            "visibility": [
+                "model",
+                "app"
+            ]
+        }
+    }
+}

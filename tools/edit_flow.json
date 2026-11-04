@@ -1,0 +1,107 @@
+{
+    "name": "edit_flow",
+    "title": "Change a flow",
+    "description": "Change a draft or inactive flow: an ordered list of changes, saved together or not at all (up to 200). A\nrefusal says `nothing_saved`, the failing `change_index`, its `op` and why. Ops:\n`add_card` (`ref`, `type`, `name`, `settings`; every outcome starts as `stop`);\n`update_card` (`card`, `name`, `settings` merged, `replace: true` to replace them all);\n`remove_card` (`card`); `connect` (`from`, `outcome`, `to`, `actions`);\n`add_trigger` (`type`, `settings`); `update_trigger` (`trigger`, `settings` merged, `active`);\n`remove_trigger` (`trigger`);\n`update_flow` (`name`, `start_card`, `persona_id` with 0 to detach, `settings` merged, `completion_actions`).\n`card`, `from`, `to` and `start_card` take a card id or a `ref` set earlier in the call; `to` also takes\n\"stop\" or \"flow:<id>\". Flows cannot loop. The first card added starts the flow. A live flow can only be\nrenamed. The answer maps refs to card ids, and gives the checks and `warnings`: what the change broke.",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            },
+            "changes": {
+                "items": {
+                    "properties": {
+                        "op": {
+                            "enum": [
+                                "add_card",
+                                "update_card",
+                                "remove_card",
+                                "connect",
+                                "add_trigger",
+                                "update_trigger",
+                                "remove_trigger",
+                                "update_flow"
+                            ],
+                            "type": "string"
+                        },
+                        "ref": {
+                            "type": "string"
+                        },
+                        "type": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "settings": {
+                            "type": "object"
+                        },
+                        "replace": {
+                            "type": "boolean"
+                        },
+                        "card": {
+                            "type": "string"
+                        },
+                        "from": {
+                            "type": "string"
+                        },
+                        "outcome": {
+                            "type": "string"
+                        },
+                        "to": {
+                            "type": "string"
+                        },
+                        "actions": {
+                            "items": {
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "trigger": {
+                            "type": "integer"
+                        },
+                        "active": {
+                            "type": "boolean"
+                        },
+                        "start_card": {
+                            "type": "string"
+                        },
+                        "persona_id": {
+                            "type": "integer"
+                        },
+                        "completion_actions": {
+                            "items": {
+                                "type": "object"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object",
+                    "required": [
+                        "op"
+                    ]
+                },
+                "type": "array"
+            }
+        },
+        "type": "object",
+        "required": [
+            "flow_id",
+            "changes"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": false,
+        "idempotentHint": false
+    },
+    "_meta": {
+        "ui": {
+            "resourceUri": "ui://resources/flow-map-app",
+            "visibility": [
+                "model",
+                "app"
+            ]
+        }
+    }
+}

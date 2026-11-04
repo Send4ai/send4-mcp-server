@@ -1,0 +1,33 @@
+{
+    "name": "update_member",
+    "title": "Change a team member",
+    "description": "Change a member's role between manager and agent, or deactivate or reactivate them. A deactivated member\ncannot sign in and their connected assistants stop working; reactivating takes a seat. Nobody can be made\nan admin here, and another admin can only be deactivated or reactivated.",
+    "inputSchema": {
+        "properties": {
+            "member_id": {
+                "type": "integer"
+            },
+            "role": {
+                "enum": [
+                    "client_manager",
+                    "client_agent"
+                ],
+                "type": "string"
+            },
+            "is_active": {
+                "description": "false deactivates them, true reactivates them.",
+                "type": "boolean"
+            }
+        },
+        "type": "object",
+        "required": [
+            "member_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

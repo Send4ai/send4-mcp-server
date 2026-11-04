@@ -1,0 +1,15 @@
+{
+    "name": "list_flow_templates",
+    "title": "Flow templates",
+    "description": "The ready-made flows a new flow can start from: each template's key, name, what it does and how it\nstarts. Pass a key to `create_flow` as `template_key` for a draft copy.",
+    "inputSchema": {
+        "type": "object",
+        "properties": {}
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

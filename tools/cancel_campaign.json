@@ -1,0 +1,22 @@
+{
+    "name": "cancel_campaign",
+    "title": "Cancel a campaign",
+    "description": "Stop a campaign for good. A draft is deleted. A scheduled, running or paused campaign is cancelled: nobody\nnew is started and it cannot be resumed, though conversations already going carry on. Pausing is the\nreversible alternative.",
+    "inputSchema": {
+        "properties": {
+            "campaign_id": {
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "campaign_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

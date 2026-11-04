@@ -1,0 +1,22 @@
+{
+    "name": "resume_ai",
+    "title": "Let the AI answer again",
+    "description": "Hand a paused conversation back to the AI: the flow answers again and a timer it held is re-armed. A conversation the flow failed on is retried on the card that failed.",
+    "inputSchema": {
+        "properties": {
+            "conversation_id": {
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "conversation_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

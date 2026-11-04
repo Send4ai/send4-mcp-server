@@ -1,0 +1,31 @@
+{
+    "name": "create_mailbox",
+    "title": "Create an email address",
+    "description": "Create an email address on Send4. It sends nothing until a flow or a campaign uses it.",
+    "inputSchema": {
+        "properties": {
+            "name": {
+                "description": "The part before the @.",
+                "type": "string"
+            },
+            "domain": {
+                "description": "From `get_mailbox_setup`; the first by default.",
+                "type": "string"
+            },
+            "display_name": {
+                "description": "The sender name.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "name"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": false
+    }
+}

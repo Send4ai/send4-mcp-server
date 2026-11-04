@@ -1,0 +1,90 @@
+{
+    "name": "get_performance",
+    "title": "Conversation performance",
+    "description": "The Analytics Performance page: conversations started, replied, gave the details asked for,\nand booked, what it cost, and how those moved over time, for a date range and filters, per flow with `breakdown` and against the previous period with `compare`. By default the last 30 days by\nweek, in UTC days. `conversations_started` counts conversations a flow or person sent to;\n Costs are at the workspace's own SMS price. `whole_period: false`\nmarks a bucket the range or today cuts short. `totals` counts each conversation once, so it is not the sum of\nthe buckets. Rehearsals never count.",
+    "inputSchema": {
+        "properties": {
+            "from": {
+                "description": "YYYY-MM-DD",
+                "type": "string"
+            },
+            "to": {
+                "description": "Inclusive, at most 366 days after `from`.",
+                "type": "string"
+            },
+            "interval": {
+                "enum": [
+                    "day",
+                    "week",
+                    "month"
+                ],
+                "type": "string"
+            },
+            "compare": {
+                "type": "boolean"
+            },
+            "flow_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "channel_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "campaign_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "assigned_user_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "trigger_type": {
+                "items": {
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "direction": {
+                "enum": [
+                    "inbound",
+                    "outbound"
+                ],
+                "type": "string"
+            },
+            "channel_type": {
+                "items": {
+                    "enum": [
+                        "sms",
+                        "email",
+                        "web_widget"
+                    ],
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "breakdown": {
+                "description": "`flow` adds one row per flow.",
+                "enum": [
+                    "flow"
+                ],
+                "type": "string"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

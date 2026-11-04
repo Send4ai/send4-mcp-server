@@ -1,0 +1,30 @@
+{
+    "name": "get_flow_map",
+    "title": "Draw a flow map",
+    "description": "The shape of one flow — its cards, where each outcome leads, the start card and\nthe trigger types — for the flow map view. Use `read_flow` to read a flow.",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "flow_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    },
+    "_meta": {
+        "ui": {
+            "resourceUri": "ui://resources/flow-map-app",
+            "visibility": [
+                "app"
+            ]
+        }
+    }
+}

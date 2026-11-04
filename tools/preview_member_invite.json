@@ -1,0 +1,35 @@
+{
+    "name": "preview_member_invite",
+    "title": "Preview inviting a team member",
+    "description": "What inviting a person to this workspace by email would do, without sending anything: a\n`summary` (who, as what, seats in use) and a `confirmation` code valid for 10 minutes for\n`invite_member`. They can be invited as a manager or an agent, never an admin.",
+    "inputSchema": {
+        "properties": {
+            "email": {
+                "description": "The email address to invite.",
+                "type": "string"
+            },
+            "role": {
+                "description": "`client_agent` (default) answers conversations; `client_manager` also sees the team's work.",
+                "enum": [
+                    "client_manager",
+                    "client_agent"
+                ],
+                "type": "string"
+            },
+            "name": {
+                "description": "Their name, if known. They can change it when they sign up.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "email"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": false
+    }
+}

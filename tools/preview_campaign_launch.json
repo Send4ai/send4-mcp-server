@@ -1,0 +1,64 @@
+{
+    "name": "preview_campaign_launch",
+    "title": "Preview a campaign launch",
+    "description": "What launching a draft campaign would do, without sending anything: runs every check the\nlaunch makes and answers a `summary` (how many people, from which number or mailbox, when,\nhow fast, the expected cost and AI use), the estimate, and a `confirmation` code valid for\n10 minutes for `launch_campaign`. Times without an offset are the workspace's timezone.",
+    "inputSchema": {
+        "properties": {
+            "campaign_id": {
+                "type": "integer"
+            },
+            "scheduled_at": {
+                "description": "When to start, e.g. \"2026-11-03 09:00\". Leave it out to start now.",
+                "type": "string"
+            },
+            "send_window": {
+                "description": "Only start new people inside these hours.",
+                "properties": {
+                    "start": {
+                        "description": "HH:MM",
+                        "type": "string"
+                    },
+                    "end": {
+                        "description": "HH:MM, after start",
+                        "type": "string"
+                    },
+                    "days": {
+                        "description": "1 = Monday … 7 = Sunday",
+                        "items": {
+                            "type": "integer"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "pace": {
+                "description": "Defaults to 1 every 10 minutes.",
+                "properties": {
+                    "count": {
+                        "type": "integer"
+                    },
+                    "every_minutes": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "reply_window_days": {
+                "description": "How many days each conversation keeps answering replies.",
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "campaign_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": false
+    }
+}

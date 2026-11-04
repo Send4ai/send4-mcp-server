@@ -1,0 +1,48 @@
+{
+    "name": "rehearse_flow",
+    "title": "Rehearse a flow",
+    "description": "Play a flow as the customer on Send4's simulator. No real customer\nis texted. To start: `flow_id` and `mode`: `inbound` (first message in `say`), `campaign` (list\ncolumns in `context`), `webhook` (request body in `payload`) or `web_chat`. Works on drafts. To\nreply: `conversation_id` and `say`. To fast-forward: `conversation_id` and `control` (`skip_wait`\nends a wait card's timer, `end_tail` closes the follow-up window). The AI takes a few seconds: read the answer with `read_rehearsal`. It spends the AI allowance, and webhook, email\nand Hanna cards send for real, marked as tests.",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            },
+            "mode": {
+                "description": "Defaults to inbound.",
+                "enum": [
+                    "inbound",
+                    "campaign",
+                    "webhook",
+                    "web_chat"
+                ],
+                "type": "string"
+            },
+            "conversation_id": {
+                "type": "integer"
+            },
+            "say": {
+                "type": "string"
+            },
+            "context": {
+                "type": "object"
+            },
+            "payload": {
+                "type": "object"
+            },
+            "control": {
+                "enum": [
+                    "skip_wait",
+                    "end_tail"
+                ],
+                "type": "string"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true,
+        "idempotentHint": false
+    }
+}

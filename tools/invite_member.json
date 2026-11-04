@@ -1,0 +1,28 @@
+{
+    "name": "invite_member",
+    "title": "Invite a team member",
+    "description": "Invite a person to this workspace by email, with the `confirmation` code from\n`preview_member_invite`. They get an email with a link to set a password, valid for 72\nhours, and then see the conversations their role allows. ",
+    "inputSchema": {
+        "properties": {
+            "email": {
+                "description": "The same address as the preview.",
+                "type": "string"
+            },
+            "confirmation": {
+                "description": "The code from `preview_member_invite`.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "email",
+            "confirmation"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true,
+        "idempotentHint": false
+    }
+}

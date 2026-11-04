@@ -1,0 +1,27 @@
+{
+    "name": "assign_conversation",
+    "title": "Assign a conversation",
+    "description": "Make a team member the owner of a conversation, or none (`member_id: 0`). The new owner is notified, and a\nflow running on it uses them as its assignee from now on. The AI keeps answering.",
+    "inputSchema": {
+        "properties": {
+            "conversation_id": {
+                "type": "integer"
+            },
+            "member_id": {
+                "description": "0 removes the owner.",
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "conversation_id",
+            "member_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

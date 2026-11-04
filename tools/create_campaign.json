@@ -1,0 +1,84 @@
+{
+    "name": "create_campaign",
+    "title": "Create a campaign draft",
+    "description": "Create a campaign as a draft: which active flow it sends, from which number or mailbox, and to whom:\nleads by id, everyone with some tags, a pasted list, or the people of an earlier campaign\n(`copy_from_campaign_id` with `copy_scope`). Nothing is sent. An email campaign needs a `subject`. A\n`goal` is any card outcome of the flow except failed, with an optional target; without one it uses\nthe flow's booking, if it books.",
+    "inputSchema": {
+        "properties": {
+            "name": {
+                "type": "string"
+            },
+            "flow_id": {
+                "description": "An active flow with a campaign trigger.",
+                "type": "integer"
+            },
+            "channel_id": {
+                "type": "integer"
+            },
+            "subject": {
+                "type": "string"
+            },
+            "lead_ids": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "tag_ids": {
+                "description": "Up to 10.",
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "tag_match": {
+                "enum": [
+                    "any",
+                    "all"
+                ],
+                "type": "string"
+            },
+            "pasted_recipients": {
+                "description": "One recipient per line.",
+                "type": "string"
+            },
+            "copy_from_campaign_id": {
+                "description": "Run a finished campaign again. Not with lead_ids or pasted_recipients.",
+                "type": "integer"
+            },
+            "copy_scope": {
+                "enum": [
+                    "all",
+                    "not_reached",
+                    "not_replied"
+                ],
+                "type": "string"
+            },
+            "goal": {
+                "properties": {
+                    "card_id": {
+                        "type": "integer"
+                    },
+                    "outcome": {
+                        "type": "string"
+                    },
+                    "target": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "type": "object",
+        "required": [
+            "name",
+            "flow_id",
+            "channel_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": false
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "pause_campaign",
+    "title": "Pause a campaign",
+    "description": "Pause a running campaign: nobody new is started, and people already in a conversation keep being\nanswered. `resume_at` resumes it by itself then, after the checks a manual resume makes.",
+    "inputSchema": {
+        "properties": {
+            "campaign_id": {
+                "type": "integer"
+            },
+            "resume_at": {
+                "description": "e.g. \"2026-11-03 09:00\", workspace time.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "campaign_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

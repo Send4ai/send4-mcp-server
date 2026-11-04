@@ -1,0 +1,24 @@
+{
+    "name": "explain_conversation",
+    "title": "Why a conversation went wrong",
+    "description": "What happened in one conversation or flow run: who it is with, which flow ran, how it ended or what it is\nwaiting for in plain words (`what_happened`), the cards it went through (`trail`, oldest first), which fields\nwere collected and which are missing, and other runs on it. Give `conversation_id` (its latest run) or `run_id`.\n`edited_since_this_run` means the current flow may not explain this run. With the conversation-content\npermission it also has `collected_values`, `recent_messages`, the customer's name and each step's error text.\nEmails and phone numbers are masked; other values are shown as collected.",
+    "inputSchema": {
+        "properties": {
+            "conversation_id": {
+                "description": "From `list_conversations`.",
+                "type": "integer"
+            },
+            "run_id": {
+                "description": "From `list_flow_runs`.",
+                "type": "integer"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

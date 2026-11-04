@@ -1,0 +1,22 @@
+{
+    "name": "check_flow",
+    "title": "Check a flow",
+    "description": "Everything the flow builder would flag on a flow: each issue's severity (an `error` blocks switching\nit on, a `warning` never does), a plain message, and the card, trigger, outcome or field it is\nabout.",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "flow_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

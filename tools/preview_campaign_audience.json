@@ -1,0 +1,49 @@
+{
+    "name": "preview_campaign_audience",
+    "title": "Count a campaign audience",
+    "description": "Count who a campaign would reach before creating it: leads by id, everyone with some tags, and/or a\npasted list, as one deduplicated set. Answers how many can be sent to, have opted out, could not be\nread or are duplicates, the recipient limit, and which of the flow's list columns are missing.\nA pasted list is one recipient per line: a phone (or an email for a mailbox) first,\nthen the columns separated by tabs or commas, the first line naming them. A number without a + is\nread in the sender's country.",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            },
+            "channel_id": {
+                "description": "Decides whether the list is read as phones or emails.",
+                "type": "integer"
+            },
+            "lead_ids": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "tag_ids": {
+                "description": "Up to 10.",
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "tag_match": {
+                "enum": [
+                    "any",
+                    "all"
+                ],
+                "type": "string"
+            },
+            "pasted_recipients": {
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "flow_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

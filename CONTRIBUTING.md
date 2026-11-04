@@ -8,6 +8,9 @@ Thanks for helping make these guides better.
 - **Something an assistant should be able to do in Send4:** open an issue with the **Idea** form.
 - **A security problem:** never in an issue or a pull request. See [SECURITY.md](SECURITY.md).
 
+- **A tool's description in `tools/`:** those files are generated from the server and replaced
+  on every update, so a pull request there would be overwritten. Open an issue instead.
+
 This repository holds documentation and client configuration only. The server isn't here, so a
 pull request can't change what a tool does.
 

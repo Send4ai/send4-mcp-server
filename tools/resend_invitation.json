@@ -1,0 +1,22 @@
+{
+    "name": "resend_invitation",
+    "title": "Resend an invitation",
+    "description": "Email a member whose invitation is pending a fresh link, valid for 72 hours. Limited per address and per workspace; at the limit the answer says so.",
+    "inputSchema": {
+        "properties": {
+            "member_id": {
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "member_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "openWorldHint": true,
+        "idempotentHint": false
+    }
+}

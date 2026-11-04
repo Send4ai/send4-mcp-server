@@ -1,0 +1,92 @@
+{
+    "name": "get_message_usage",
+    "title": "Message usage",
+    "description": "The Analytics Messages page: messages and SMS parts sent and received in a range (this month by default), their cost at\nthe workspace's SMS price, the monthly SMS-part limit and how much is used, a series, and a breakdown by `group_by`.\nUTC days, as on the page. ",
+    "inputSchema": {
+        "properties": {
+            "from": {
+                "description": "YYYY-MM-DD",
+                "type": "string"
+            },
+            "to": {
+                "description": "Inclusive, at most 366 days after `from`.",
+                "type": "string"
+            },
+            "interval": {
+                "enum": [
+                    "day",
+                    "week",
+                    "month"
+                ],
+                "type": "string"
+            },
+            "compare": {
+                "type": "boolean"
+            },
+            "flow_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "channel_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "campaign_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "assigned_user_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "trigger_type": {
+                "items": {
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "direction": {
+                "enum": [
+                    "inbound",
+                    "outbound"
+                ],
+                "type": "string"
+            },
+            "channel_type": {
+                "items": {
+                    "enum": [
+                        "sms",
+                        "email",
+                        "web_widget"
+                    ],
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "group_by": {
+                "description": "Defaults to channel.",
+                "enum": [
+                    "channel",
+                    "flow",
+                    "campaign"
+                ],
+                "type": "string"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

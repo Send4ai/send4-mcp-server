@@ -1,0 +1,26 @@
+{
+    "name": "describe_card_type",
+    "title": "Explain a card type",
+    "description": "Explains up to 8 card types (`keys`): what each is for, the common mistake, its settings, a complete working\n`example`, its outcomes and the variables it writes. `outcomes` is the set before a card's own settings:\n`classify_intent` also has one per intent and `conditional` one per branch. `blocking`: the flow waits for the\nnext inbound message, which can depend on settings. `waits_for_customer`: a run can sit on it.\n`provides_variables` is offered, not promised; `collect_fields` names its own. `legacy`: no longer addable.",
+    "inputSchema": {
+        "properties": {
+            "keys": {
+                "description": "Up to 8 card type keys, for example [\"collect_fields\", \"send_message\"].",
+                "items": {
+                    "type": "string"
+                },
+                "type": "array"
+            }
+        },
+        "type": "object",
+        "required": [
+            "keys"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

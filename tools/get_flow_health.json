@@ -1,0 +1,29 @@
+{
+    "name": "get_flow_health",
+    "title": "Flow health",
+    "description": "How one flow has been doing lately: runs started in a recent window, how they ended, how many are still going,\nhow many conversations they covered and rehearsals left out.\nRuns are counted by the UTC date they started. `waiting` is a subset of running, and a running run is normally\nwaiting for a customer, not stuck. Today is partial.",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            },
+            "days": {
+                "description": "UTC days back, ending with today. At most 90.",
+                "default": 30,
+                "minimum": 1,
+                "maximum": 90,
+                "type": "integer"
+            }
+        },
+        "type": "object",
+        "required": [
+            "flow_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

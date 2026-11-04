@@ -1,0 +1,71 @@
+{
+    "name": "list_conversations",
+    "title": "List conversations",
+    "description": "The inbox, most recently active first, 50 a page, filtered like the Conversations page. Each row: status and why, channel\nkind, flow and run, owner, when it last moved, and the customer: name only with the conversation-content permission,\ncontact details always masked. No message text.",
+    "inputSchema": {
+        "properties": {
+            "status": {
+                "items": {
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "assigned": {
+                "description": "\"me\", \"unassigned\" or a member id.",
+                "type": "string"
+            },
+            "flow_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "campaign_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "channel_type": {
+                "items": {
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "replied": {
+                "type": "boolean"
+            },
+            "meeting_booked": {
+                "type": "boolean"
+            },
+            "search": {
+                "description": "Name, phone or email.",
+                "type": "string"
+            },
+            "date_from": {
+                "description": "YYYY-MM-DD",
+                "type": "string"
+            },
+            "date_to": {
+                "description": "YYYY-MM-DD",
+                "type": "string"
+            },
+            "limit": {
+                "minimum": 1,
+                "maximum": 100,
+                "type": "integer"
+            },
+            "page": {
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

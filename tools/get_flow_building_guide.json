@@ -1,0 +1,15 @@
+{
+    "name": "get_flow_building_guide",
+    "title": "How to build a flow",
+    "description": "The rules for building a Send4 flow that no check enforces on save: who says what between persona and card,\ncommon traps, each card's run-time behaviour, how a run ends, wiring, variables, patterns, and what\nto check before switching a flow on.",
+    "inputSchema": {
+        "type": "object",
+        "properties": {}
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

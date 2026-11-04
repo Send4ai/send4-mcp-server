@@ -1,0 +1,50 @@
+{
+    "name": "list_flow_runs",
+    "title": "List flow runs",
+    "description": "Runs of one flow, or of one conversation across flows, newest first, 50 a page by default: status, `ended_because`\n(set only on an abandoned run), the conversation, whether it was a rehearsal, when it started, finished and last\nmoved, and the card it is on. No message text. Give `flow_id`, `conversation_id` or both. Rehearsals are left out\nunless `include_rehearsals`. A bare date in `since` or `until` means that whole day in the workspace's timezone.\n",
+    "inputSchema": {
+        "properties": {
+            "flow_id": {
+                "type": "integer"
+            },
+            "conversation_id": {
+                "type": "integer"
+            },
+            "status": {
+                "enum": [
+                    "running",
+                    "finished",
+                    "failed",
+                    "abandoned"
+                ],
+                "type": "string"
+            },
+            "since": {
+                "description": "A date or ISO 8601 time.",
+                "type": "string"
+            },
+            "until": {
+                "description": "A date or ISO 8601 time.",
+                "type": "string"
+            },
+            "include_rehearsals": {
+                "type": "boolean"
+            },
+            "limit": {
+                "minimum": 1,
+                "maximum": 100,
+                "type": "integer"
+            },
+            "cursor": {
+                "type": "integer"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

@@ -197,8 +197,153 @@ allows it for the workspace and you tick it when you connect.
 | **Invite and manage team members** | Invite managers and agents, change their role, and deactivate them. |
 | **Create email addresses** | Create new email addresses for the workspace on Send4. |
 
-- [docs/tools.md](docs/tools.md) lists every tool under each permission.
-- [docs/permissions.md](docs/permissions.md) has the workspace switches and which role can use what.
+### All tools
+
+Open a group to see its tools. Each name links to that tool's full definition in [`tools/`](tools/):
+its description, its inputs and its safety hints, exactly as your assistant receives them.
+
+<details>
+<summary><b>Reading your workspace</b> · 26 tools</summary>
+
+**For every role**
+
+| Tool | What it does |
+| --- | --- |
+| [`get_context`](tools/get_context.json) | Which workspace and person this connection belongs to, what it was granted, and what it wasn't. |
+| [`list_conversations`](tools/list_conversations.json) | Your inbox, filtered as on the Conversations page, without the messages. |
+| [`list_leads`](tools/list_leads.json) | Your leads and tags, filtered as on the Leads page. |
+| [`list_meetings`](tools/list_meetings.json) | The meetings on your Send4 calendar. |
+| [`find_meeting_times`](tools/find_meeting_times.json) | The free times for a customer, or the times a meeting could move to. Nothing is booked. |
+| [`list_members`](tools/list_members.json) | The people in your workspace. A Client Admin sees their details, and anyone else sees names. |
+| [`list_channels`](tools/list_channels.json) | Your sending numbers and mailboxes, and whether a campaign can send from each. |
+| [`get_performance`](tools/get_performance.json) | Conversations started, replies, details collected, bookings and cost over time. |
+| [`get_message_usage`](tools/get_message_usage.json) | Messages and SMS parts sent and received, their cost, and your monthly SMS limit. |
+
+**For Client Admin and Client Agent**
+
+| Tool | What it does |
+| --- | --- |
+| [`list_flows`](tools/list_flows.json) | Your flows, with their status and what starts them. |
+| [`read_flow`](tools/read_flow.json) | One flow in full, with its cards, settings and wiring. |
+| [`check_flow`](tools/check_flow.json) | Everything the flow builder would flag on a flow. |
+| [`list_card_types`](tools/list_card_types.json) | Every type of card a flow can use. |
+| [`describe_card_type`](tools/describe_card_type.json) | What one type of card does and which settings it takes. |
+| [`get_flow_building_guide`](tools/get_flow_building_guide.json) | Send4's rules and common traps for building a flow. |
+| [`list_flow_templates`](tools/list_flow_templates.json) | The ready-made flows a new flow can start from. |
+| [`list_personas`](tools/list_personas.json) | The identities a flow's AI can speak as. |
+| [`list_flow_runs`](tools/list_flow_runs.json) | The runs of one flow and how each ended. |
+| [`get_flow_health`](tools/get_flow_health.json) | How many runs of a flow started lately and how they ended. |
+| [`get_drop_off`](tools/get_drop_off.json) | Where conversations stop, across your flows or card by card in one. |
+| [`explain_conversation`](tools/explain_conversation.json) | What happened in one conversation or flow run, which cards it went through, and what's still missing. |
+| [`compare_card_text`](tools/compare_card_text.json) | How new wording differs from a card's current text. Nothing is saved. |
+
+**For Client Admin only**
+
+| Tool | What it does |
+| --- | --- |
+| [`get_account_usage`](tools/get_account_usage.json) | What you've used against your plan in a month. |
+| [`list_campaigns`](tools/list_campaigns.json) | Your campaigns, with their status and results. |
+| [`read_campaign`](tools/read_campaign.json) | One campaign's status, progress and results. |
+| [`get_campaign_report`](tools/get_campaign_report.json) | A launched campaign's report, by card, day and meeting. |
+
+</details>
+
+<details>
+<summary><b>Reading customer messages</b> · 1 tool</summary>
+
+| Tool | What it does |
+| --- | --- |
+| [`read_conversation`](tools/read_conversation.json) | What was said in one conversation. Every role. |
+
+</details>
+
+<details>
+<summary><b>Building flows</b> · 9 tools</summary>
+
+| Tool | What it does |
+| --- | --- |
+| [`create_flow`](tools/create_flow.json) | Start a draft flow, blank or from a template. |
+| [`duplicate_flow`](tools/duplicate_flow.json) | Copy a flow into a new draft. The copy gets its own webhook address, so anything that sends to the old one has to move. |
+| [`edit_flow`](tools/edit_flow.json) | Change a draft or switched-off flow: its cards, where each one leads, what starts it, its name and its settings. All the changes are saved together or not at all, and the answer reports anything they broke. A live flow can only be renamed. |
+| [`save_persona`](tools/save_persona.json) | Create or change a persona. A persona used by a live flow can't be changed. |
+| [`suggest_card_change`](tools/suggest_card_change.json) | Leave new wording on one card for a person to accept in the builder. It changes nothing live, so it works on a live flow too. |
+| [`rehearse_flow`](tools/rehearse_flow.json) | Play a flow as the customer on Send4's simulator. Nobody is texted, but webhook, email and Hanna cards still send for real, marked as tests. |
+| [`read_rehearsal`](tools/read_rehearsal.json) | Read what was said in a rehearsal. |
+| [`preview_flow_status`](tools/preview_flow_status.json) | See what switching a flow on, or a live flow off, would do, without doing it. Send4 gives the assistant a summary to show you and ask for your yes. |
+| [`set_flow_status`](tools/set_flow_status.json) | Switch a flow on or off. Switching one on, or a live one off, needs the code from that preview. |
+
+</details>
+
+<details>
+<summary><b>Running campaigns</b> · 12 tools</summary>
+
+| Tool | What it does |
+| --- | --- |
+| [`preview_campaign_audience`](tools/preview_campaign_audience.json) | Count who a campaign would reach, before creating it. |
+| [`create_campaign`](tools/create_campaign.json) | Create a draft campaign. Nothing is sent. |
+| [`preview_campaign_launch`](tools/preview_campaign_launch.json) | Run every launch check and work out the cost, without sending anything. Send4 gives the assistant a summary to show you and ask for your yes. |
+| [`launch_campaign`](tools/launch_campaign.json) | Send a draft campaign to its recipients, using the code from that preview. |
+| [`preview_added_recipients`](tools/preview_added_recipients.json) | Count who would be added to a campaign, without adding anyone. Send4 gives the assistant a summary to show you and ask for your yes. |
+| [`add_campaign_recipients`](tools/add_campaign_recipients.json) | Add those people to the campaign, using the code from that preview. On a running campaign, they'll be messaged. |
+| [`update_campaign`](tools/update_campaign.json) | Change the pace, sending hours or goal of a campaign that's scheduled, running or paused. |
+| [`pause_campaign`](tools/pause_campaign.json) | Stop starting new people. Conversations already going carry on. |
+| [`resume_campaign`](tools/resume_campaign.json) | Start new people again. |
+| [`cancel_campaign`](tools/cancel_campaign.json) | Stop a campaign for good. A draft is deleted. |
+| [`create_lead`](tools/create_lead.json) | Add one lead. This sends nothing. |
+| [`tag_leads`](tools/tag_leads.json) | Add tags to leads or take them off. |
+
+</details>
+
+<details>
+<summary><b>Working the inbox and calendar</b> · 9 tools</summary>
+
+| Tool | What it does |
+| --- | --- |
+| [`send_message`](tools/send_message.json) | Reply to a customer. Once sent, it can't be taken back, and the AI stops answering that conversation. |
+| [`preview_new_conversation`](tools/preview_new_conversation.json) | Check how a typed phone number reads and the exact text, without sending anything. Send4 gives the assistant a code for it. |
+| [`start_conversation`](tools/start_conversation.json) | Text someone first. A typed number needs the code from that preview; a lead doesn't. Once sent, it can't be taken back, and no flow answers until the AI is resumed. |
+| [`assign_conversation`](tools/assign_conversation.json) | Give a conversation to a team member, or to nobody. The AI keeps answering. |
+| [`take_over_conversation`](tools/take_over_conversation.json) | Pause the AI so a person answers. |
+| [`resume_ai`](tools/resume_ai.json) | Hand a paused conversation back to the AI. |
+| [`mark_lead_opted_out`](tools/mark_lead_opted_out.json) | Stop texting a number, for a customer who asked in words other than STOP. Only a person can opt it back in, on the lead's page. |
+| [`book_meeting`](tools/book_meeting.json) | Book or move a meeting. This doesn't tell the customer. |
+| [`update_meeting`](tools/update_meeting.json) | Cancel a meeting, or mark it completed or a no-show. A cancellation tells the customer only if the assistant is asked to. |
+
+</details>
+
+<details>
+<summary><b>Managing your team</b> · 4 tools</summary>
+
+| Tool | What it does |
+| --- | --- |
+| [`preview_member_invite`](tools/preview_member_invite.json) | See who would be invited, in which role, and the seats in use, without sending anything. Send4 gives the assistant a summary to show you and ask for your yes. |
+| [`invite_member`](tools/invite_member.json) | Invite someone as a manager or agent, using the code from that preview. Nobody can be made an admin this way. |
+| [`update_member`](tools/update_member.json) | Change someone's role between manager and agent, or deactivate or reactivate them. |
+| [`resend_invitation`](tools/resend_invitation.json) | Send a fresh link to someone whose invitation is still pending. |
+
+</details>
+
+<details>
+<summary><b>Setting up email</b> · 2 tools</summary>
+
+| Tool | What it does |
+| --- | --- |
+| [`get_mailbox_setup`](tools/get_mailbox_setup.json) | Whether this workspace can have an email address on Send4 and on which domains, whether it can connect its own mailbox, and the Send4 page that does it. |
+| [`create_mailbox`](tools/create_mailbox.json) | Create an email address on Send4. It sends nothing until a flow or a campaign uses it. |
+
+</details>
+
+<details>
+<summary><b>Used by the in-chat views</b> · 1 tool</summary>
+
+| Tool | What it does |
+| --- | --- |
+| [`get_flow_map`](tools/get_flow_map.json) | Draw one flow card by card, for the flow map view. |
+
+</details>
+
+- [docs/tools.md](docs/tools.md) has the same list, with which roles can use each tool.
+- [docs/permissions.md](docs/permissions.md) has the workspace switches and who can use what.
 
 ## Example workflows
 

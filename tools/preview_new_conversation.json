@@ -1,0 +1,32 @@
+{
+    "name": "preview_new_conversation",
+    "title": "Preview texting a new number",
+    "description": "What texting a typed phone number would do, without sending anything: how the number reads\nin the sending number's country, the exact text, and a `confirmation` code valid for 10\nminutes for `start_conversation`.  A lead needs no preview: `start_conversation` takes\nits `lead_id` directly.",
+    "inputSchema": {
+        "properties": {
+            "channel_id": {
+                "description": "From `list_channels`.",
+                "type": "integer"
+            },
+            "phone": {
+                "type": "string"
+            },
+            "body": {
+                "description": "The message, exactly as the customer should get it.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "channel_id",
+            "phone",
+            "body"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": false
+    }
+}

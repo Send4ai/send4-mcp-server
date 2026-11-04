@@ -1,0 +1,46 @@
+{
+    "name": "preview_added_recipients",
+    "title": "Preview adding people to a campaign",
+    "description": "Who would be added to a draft, scheduled, running or paused campaign, without adding anyone: leads by id, everyone\nwith some tags, and/or a pasted list. Answers the counts, a `summary` and a `confirmation` code valid for 10 minutes\nfor `add_campaign_recipients`. Nobody is added twice, opted-out numbers are skipped, and on a running campaign the\npeople added will be messaged.",
+    "inputSchema": {
+        "properties": {
+            "campaign_id": {
+                "type": "integer"
+            },
+            "lead_ids": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "tag_ids": {
+                "description": "Up to 10.",
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "tag_match": {
+                "enum": [
+                    "any",
+                    "all"
+                ],
+                "type": "string"
+            },
+            "pasted_recipients": {
+                "description": "One recipient per line; see `preview_campaign_audience`.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "campaign_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": false
+    }
+}

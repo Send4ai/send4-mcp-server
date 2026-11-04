@@ -1,0 +1,61 @@
+{
+    "name": "list_campaigns",
+    "title": "List campaigns",
+    "description": "The campaigns, newest first, 25 a page: status, flow, sender, pace, sending hours, progress and results. Archived ones are\nleft out unless `archived` says otherwise. Live campaigns and drafts are listed whatever the dates; `from` and `to` narrow the\nothers by when they started, in the workspace's timezone.",
+    "inputSchema": {
+        "properties": {
+            "status": {
+                "items": {
+                    "enum": [
+                        "draft",
+                        "scheduled",
+                        "running",
+                        "paused",
+                        "completed",
+                        "cancelled"
+                    ],
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "flow_id": {
+                "items": {
+                    "type": "integer"
+                },
+                "type": "array"
+            },
+            "from": {
+                "description": "YYYY-MM-DD",
+                "type": "string"
+            },
+            "to": {
+                "description": "YYYY-MM-DD",
+                "type": "string"
+            },
+            "archived": {
+                "enum": [
+                    "exclude",
+                    "only",
+                    "include"
+                ],
+                "type": "string"
+            },
+            "limit": {
+                "minimum": 1,
+                "maximum": 100,
+                "type": "integer"
+            },
+            "page": {
+                "minimum": 1,
+                "type": "integer"
+            }
+        },
+        "type": "object"
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

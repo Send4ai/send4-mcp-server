@@ -1,0 +1,27 @@
+{
+    "name": "add_campaign_recipients",
+    "title": "Add people to a campaign",
+    "description": "Add the people `preview_added_recipients` counted to a campaign, with its `confirmation`\ncode. Exactly the previewed audience is added. On a running campaign they will be messaged.\nIf the audience changed in between, nobody is added and the preview has to be run again.",
+    "inputSchema": {
+        "properties": {
+            "campaign_id": {
+                "type": "integer"
+            },
+            "confirmation": {
+                "description": "The code from `preview_added_recipients`.",
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "campaign_id",
+            "confirmation"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": true,
+        "idempotentHint": false
+    }
+}

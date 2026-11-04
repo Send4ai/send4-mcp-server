@@ -1,0 +1,70 @@
+{
+    "name": "update_campaign",
+    "title": "Change a campaign",
+    "description": "Change a scheduled, running or paused campaign. Give only what changes; if any of it is refused, nothing\nchanges. `pace`: new people every so many minutes, from the next minute. `send_window` in the\nworkspace's timezone, or null for any time. `goal`, or null to clear it: display only. `resume_at`: when a paused campaign resumes by itself, or null.",
+    "inputSchema": {
+        "properties": {
+            "campaign_id": {
+                "type": "integer"
+            },
+            "pace": {
+                "properties": {
+                    "count": {
+                        "type": "integer"
+                    },
+                    "every_minutes": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "send_window": {
+                "properties": {
+                    "start": {
+                        "description": "HH:MM",
+                        "type": "string"
+                    },
+                    "end": {
+                        "description": "HH:MM",
+                        "type": "string"
+                    },
+                    "days": {
+                        "description": "1 = Monday … 7 = Sunday",
+                        "items": {
+                            "type": "integer"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "goal": {
+                "properties": {
+                    "card_id": {
+                        "type": "integer"
+                    },
+                    "outcome": {
+                        "type": "string"
+                    },
+                    "target": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "resume_at": {
+                "type": "string"
+            }
+        },
+        "type": "object",
+        "required": [
+            "campaign_id"
+        ]
+    },
+    "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}

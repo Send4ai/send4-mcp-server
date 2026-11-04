@@ -1,0 +1,15 @@
+{
+    "name": "list_personas",
+    "title": "Personas",
+    "description": "The personas in this workspace, the identity a flow's AI speaks as: name, role line, instructions,\nguardrails, behaviour rules, tone and language. A persona is not a person on the team.",
+    "inputSchema": {
+        "type": "object",
+        "properties": {}
+    },
+    "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "idempotentHint": true
+    }
+}
