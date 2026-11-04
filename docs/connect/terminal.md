@@ -39,7 +39,7 @@ Check `codex mcp --help` if a flag is refused.
 Install Send4 as a Gemini CLI extension straight from this repository:
 
 ```sh
-gemini extensions install https://github.com/Send4-ai/mcp
+gemini extensions install https://github.com/send4ai/send4-mcp-server
 ```
 
 Or add the server by hand:

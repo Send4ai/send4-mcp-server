@@ -60,6 +60,6 @@ own web address, can't sign in yet. If you need one of them, email
 
 ## Still stuck?
 
-[Open an issue](https://github.com/Send4-ai/mcp/issues/new/choose). Say which assistant you use,
+[Open an issue](https://github.com/send4ai/send4-mcp-server/issues/new/choose). Say which assistant you use,
 which step failed, and copy the exact error text. Issues are public, so never paste access
 tokens, passwords, or your customers' messages, names, numbers or addresses.

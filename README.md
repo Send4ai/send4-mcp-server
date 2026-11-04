@@ -317,7 +317,7 @@ on this repository's **Security** tab, or see [SECURITY.md](SECURITY.md).
 ## Support and feedback
 
 - **A setup step is wrong or something doesn't work:**
-  [open an issue](https://github.com/Send4-ai/mcp/issues/new/choose). Issues are public: never
+  [open an issue](https://github.com/send4ai/send4-mcp-server/issues/new/choose). Issues are public: never
   paste access tokens, passwords, or your customers' messages, names, numbers or addresses.
 - **Something you'd like an assistant to do:** open an issue with the **Idea** form.
 - **Account, plan or workspace questions:** [support@send4.ai](mailto:support@send4.ai)

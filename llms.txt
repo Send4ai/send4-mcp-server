@@ -6,22 +6,22 @@ This repository contains documentation and client configuration only. It does **
 
 ## Getting started
 
-- [README](https://github.com/Send4-ai/mcp/blob/main/README.md): what the server does, one-click setup, how it works, data and security.
-- [Supported assistants](https://github.com/Send4-ai/mcp/tree/main/docs/connect): a setup guide for each assistant.
+- [README](https://github.com/send4ai/send4-mcp-server/blob/main/README.md): what the server does, one-click setup, how it works, data and security.
+- [Supported assistants](https://github.com/send4ai/send4-mcp-server/tree/main/docs/connect): a setup guide for each assistant.
 - [Help centre](https://send4.ai/support/ai-assistant-tools/): the same topics on send4.ai.
 
 ## Reference
 
-- [Tools](https://github.com/Send4-ai/mcp/blob/main/docs/tools.md): every tool, grouped by the permission that allows it.
-- [Permissions](https://github.com/Send4-ai/mcp/blob/main/docs/permissions.md): the workspace switches, the sign-in choices and who can use what.
-- [Troubleshooting](https://github.com/Send4-ai/mcp/blob/main/docs/troubleshooting.md)
-- [Example prompts](https://github.com/Send4-ai/mcp/blob/main/examples/prompts.md)
+- [Tools](https://github.com/send4ai/send4-mcp-server/blob/main/docs/tools.md): every tool, grouped by the permission that allows it.
+- [Permissions](https://github.com/send4ai/send4-mcp-server/blob/main/docs/permissions.md): the workspace switches, the sign-in choices and who can use what.
+- [Troubleshooting](https://github.com/send4ai/send4-mcp-server/blob/main/docs/troubleshooting.md)
+- [Example prompts](https://github.com/send4ai/send4-mcp-server/blob/main/examples/prompts.md)
 
 ## Client configuration
 
-- [.mcp.json](https://github.com/Send4-ai/mcp/blob/main/.mcp.json): `{"mcpServers": {"send4": {"type": "http", "url": "https://mcp.send4.ai/mcp"}}}`
-- [gemini-extension.json](https://github.com/Send4-ai/mcp/blob/main/gemini-extension.json): `gemini extensions install https://github.com/Send4-ai/mcp`
+- [.mcp.json](https://github.com/send4ai/send4-mcp-server/blob/main/.mcp.json): `{"mcpServers": {"send4": {"type": "http", "url": "https://mcp.send4.ai/mcp"}}}`
+- [gemini-extension.json](https://github.com/send4ai/send4-mcp-server/blob/main/gemini-extension.json): `gemini extensions install https://github.com/send4ai/send4-mcp-server`
 
 ## Security
 
-- [SECURITY.md](https://github.com/Send4-ai/mcp/blob/main/SECURITY.md): report a vulnerability privately.
+- [SECURITY.md](https://github.com/send4ai/send4-mcp-server/blob/main/SECURITY.md): report a vulnerability privately.
