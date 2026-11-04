@@ -2,10 +2,6 @@
 
 Back to the [list of assistants](../../README.md#connect).
 
-> **Not checked end to end yet.** Send4 accepts sign-in from this client, but nobody at Send4 has
-> run a full connection with it yet. These steps come from its own documentation. If a step
-> differs, [open an issue](https://github.com/Send4-ai/mcp/issues/new/choose).
-
 These tools connect to Send4 from your terminal. Each one opens your browser once so you can sign
 in to Send4 and choose what it may do. The Send4 screen says you'll return to "an app on this
 computer". That app is the tool you started.

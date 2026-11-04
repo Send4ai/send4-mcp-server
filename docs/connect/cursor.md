@@ -2,10 +2,6 @@
 
 Back to the [list of assistants](../../README.md#connect).
 
-> **Not checked end to end yet.** Send4 accepts sign-in from this client, but nobody at Send4 has
-> run a full connection with it yet. These steps come from its own documentation. If a step
-> differs, [open an issue](https://github.com/Send4-ai/mcp/issues/new/choose).
-
 ## Before you start
 
 A Client Admin must have turned on **Allow AI assistants** for your workspace, under
