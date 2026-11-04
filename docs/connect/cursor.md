@@ -1,6 +1,6 @@
 # Connect Cursor
 
-Back to the [list of assistants](../../README.md#connect).
+Back to the [list of assistants](../../README.md#supported-assistants).
 
 ## Before you start
 
@@ -8,6 +8,11 @@ A Client Admin must have turned on **Allow AI assistants** for your workspace, u
 **Settings → Integrations → AI assistants**. See [permissions](../permissions.md).
 
 ## Connect
+
+**One click:** [Add Send4 to Cursor](https://cursor.com/en/install-mcp?name=Send4&config=eyJ1cmwiOiJodHRwczovL21jcC5zZW5kNC5haS9tY3AifQ==), then sign in to Send4 when
+Cursor asks.
+
+**By hand:**
 
 1. Add Send4 to `~/.cursor/mcp.json`:
 

@@ -1,0 +1,13 @@
+{
+  "name": "send4",
+  "version": "1.0.0",
+  "description": "Connects Gemini CLI to your Send4 workspace: ask about your flows, campaigns, conversations and usage, and make changes your workspace allows.",
+  "mcpServers": {
+    "send4": {
+      "httpUrl": "https://mcp.send4.ai/mcp",
+      "oauth": {
+        "enabled": true
+      }
+    }
+  }
+}

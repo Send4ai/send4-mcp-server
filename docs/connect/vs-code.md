@@ -1,6 +1,6 @@
 # Connect VS Code
 
-Back to the [list of assistants](../../README.md#connect).
+Back to the [list of assistants](../../README.md#supported-assistants).
 
 ## Before you start
 
@@ -8,6 +8,11 @@ A Client Admin must have turned on **Allow AI assistants** for your workspace, u
 **Settings → Integrations → AI assistants**. See [permissions](../permissions.md).
 
 ## Connect
+
+**One click:** [Add Send4 to VS Code](https://vscode.dev/redirect/mcp/install?name=send4&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.send4.ai%2Fmcp%22%7D), then use it from Copilot Chat in agent mode
+and sign in to Send4 when asked.
+
+**By hand:**
 
 1. Open the Command Palette and run **MCP: Add Server**.
 2. Choose **HTTP**, enter `https://mcp.send4.ai/mcp` and name it `send4`.

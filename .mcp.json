@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "send4": {
+      "type": "http",
+      "url": "https://mcp.send4.ai/mcp"
+    }
+  }
+}

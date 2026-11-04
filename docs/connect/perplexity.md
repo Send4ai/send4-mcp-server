@@ -1,6 +1,6 @@
 # Connect Perplexity
 
-Back to the [list of assistants](../../README.md#connect).
+Back to the [list of assistants](../../README.md#supported-assistants).
 
 ## Before you start
 

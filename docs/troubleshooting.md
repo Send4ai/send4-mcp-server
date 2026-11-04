@@ -53,7 +53,7 @@ the workspace can use assistants again, each person connects again.
 
 ## My assistant can't sign in at all
 
-Send4 accepts sign-in from the assistants in the [README](../README.md#connect), and from tools
+Send4 accepts sign-in from the assistants in the [README](../README.md#supported-assistants), and from tools
 that sign in through your own computer. Microsoft Copilot Studio, and assistants hosted on their
 own web address, can't sign in yet. If you need one of them, email
 [support@send4.ai](mailto:support@send4.ai).

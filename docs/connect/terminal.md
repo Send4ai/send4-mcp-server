@@ -1,6 +1,6 @@
 # Connect from the terminal
 
-Back to the [list of assistants](../../README.md#connect).
+Back to the [list of assistants](../../README.md#supported-assistants).
 
 These tools connect to Send4 from your terminal. Each one opens your browser once so you can sign
 in to Send4 and choose what it may do. The Send4 screen says you'll return to "an app on this
@@ -35,6 +35,14 @@ codex mcp login send4
 Check `codex mcp --help` if a flag is refused.
 
 ## Gemini CLI
+
+Install Send4 as a Gemini CLI extension straight from this repository:
+
+```sh
+gemini extensions install https://github.com/Send4-ai/mcp
+```
+
+Or add the server by hand:
 
 ```sh
 gemini mcp add --transport http send4 https://mcp.send4.ai/mcp
