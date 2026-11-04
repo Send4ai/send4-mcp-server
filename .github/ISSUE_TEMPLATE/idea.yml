@@ -1,0 +1,20 @@
+name: Idea
+description: Something you'd like an assistant to be able to do in Send4.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public.** Don't include your customers' messages, names, phone numbers or email addresses.
+  - type: textarea
+    id: ask
+    attributes:
+      label: What you'd ask your assistant
+      description: In your own words, for example "Move every lead who replied 'later' into next month's campaign."
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it would help
+      description: What you do today instead.

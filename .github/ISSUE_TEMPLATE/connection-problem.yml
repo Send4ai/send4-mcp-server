@@ -1,0 +1,51 @@
+name: Connection problem
+description: An assistant can't connect to Send4, or a tool doesn't work as described.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public.** Never paste access tokens, passwords or your Send4 login, and never paste your customers' messages, names, phone numbers or email addresses. Flow and conversation numbers are fine.
+  - type: dropdown
+    id: assistant
+    attributes:
+      label: Assistant
+      options:
+        - Claude (web or desktop)
+        - Claude Code
+        - ChatGPT
+        - Grok
+        - VS Code
+        - Cursor
+        - Le Chat
+        - Perplexity
+        - opencode
+        - Codex CLI
+        - Gemini CLI
+        - Another one (say which below)
+    validations:
+      required: true
+  - type: dropdown
+    id: step
+    attributes:
+      label: Where it went wrong
+      options:
+        - Adding the server
+        - Signing in to Send4
+        - The Send4 screen where you choose what it may do
+        - Using a tool
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and the exact error text. Name the tool if you saw one, such as read_flow.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Assistant version
+      description: If you know it, such as the app version or the CLI's --version.
