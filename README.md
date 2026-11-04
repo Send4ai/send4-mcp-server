@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/MCP-Streamable_HTTP-059669" alt="MCP: Streamable HTTP">
   <img src="https://img.shields.io/badge/sign--in-OAuth-059669" alt="Sign-in: OAuth">
   <img src="https://img.shields.io/badge/hosted-mcp.send4.ai-0F172A" alt="Hosted at mcp.send4.ai">
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/Send4-ai/mcp?color=0F172A" alt="License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-0F172A" alt="License: MIT"></a>
 </p>
 
 <p align="center">
