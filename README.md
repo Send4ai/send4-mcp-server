@@ -14,6 +14,7 @@
   <img src="https://img.shields.io/badge/MCP-Streamable_HTTP-059669" alt="MCP: Streamable HTTP">
   <img src="https://img.shields.io/badge/sign--in-OAuth-059669" alt="Sign-in: OAuth">
   <img src="https://img.shields.io/badge/hosted-mcp.send4.ai-0F172A" alt="Hosted at mcp.send4.ai">
+  <a href="https://registry.modelcontextprotocol.io/v0.1/servers?search=ai.send4/mcp"><img src="https://img.shields.io/badge/MCP_Registry-ai.send4%2Fmcp-059669" alt="MCP Registry: ai.send4/mcp"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-0F172A" alt="License: MIT"></a>
 </p>
 
@@ -31,6 +32,9 @@ The **Send4 MCP server** is hosted by Send4 at `https://mcp.send4.ai/mcp`. There
 install or run: add the address to your assistant, sign in to Send4 in your browser, and choose
 what the assistant may do. This repository holds the setup guides, the tool list and the place to
 report a problem. It does not contain the server's code.
+
+It's listed in the official [MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=ai.send4/mcp)
+as `ai.send4/mcp`, so an assistant that reads the registry can find it by name.
 
 ## One-click setup
 

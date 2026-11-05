@@ -22,6 +22,7 @@ This repository contains documentation and client configuration only. It does **
 
 - [.mcp.json](https://github.com/send4ai/send4-mcp-server/blob/main/.mcp.json): `{"mcpServers": {"send4": {"type": "http", "url": "https://mcp.send4.ai/mcp"}}}`
 - [gemini-extension.json](https://github.com/send4ai/send4-mcp-server/blob/main/gemini-extension.json): `gemini extensions install https://github.com/send4ai/send4-mcp-server`
+- [MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=ai.send4/mcp): listed as `ai.send4/mcp`.
 
 ## Security
 
