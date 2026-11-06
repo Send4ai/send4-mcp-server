@@ -29,6 +29,7 @@
         ]
     },
     "annotations": {
+        "title": "Compare card text",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

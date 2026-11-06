@@ -91,6 +91,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "Conversation performance",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

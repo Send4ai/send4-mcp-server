@@ -23,6 +23,7 @@
         ]
     },
     "annotations": {
+        "title": "Create an email address",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

@@ -19,6 +19,7 @@
         ]
     },
     "annotations": {
+        "title": "Read a rehearsal",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

@@ -28,6 +28,7 @@
         ]
     },
     "annotations": {
+        "title": "Book or move a meeting",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

@@ -15,6 +15,7 @@
         ]
     },
     "annotations": {
+        "title": "Resend an invitation",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": true,

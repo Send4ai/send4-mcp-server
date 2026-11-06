@@ -15,6 +15,7 @@
         ]
     },
     "annotations": {
+        "title": "Let the AI answer again",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

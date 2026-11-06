@@ -15,6 +15,7 @@
         ]
     },
     "annotations": {
+        "title": "Check a flow",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

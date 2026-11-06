@@ -12,6 +12,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "List card types",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

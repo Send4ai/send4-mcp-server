@@ -45,6 +45,7 @@
         ]
     },
     "annotations": {
+        "title": "Count a campaign audience",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

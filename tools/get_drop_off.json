@@ -90,6 +90,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "Where people drop off",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

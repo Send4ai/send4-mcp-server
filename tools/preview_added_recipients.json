@@ -41,6 +41,7 @@
         ]
     },
     "annotations": {
+        "title": "Preview adding people to a campaign",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

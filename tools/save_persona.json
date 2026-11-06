@@ -98,6 +98,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "Create or change a persona",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

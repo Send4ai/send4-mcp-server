@@ -33,6 +33,7 @@
         ]
     },
     "annotations": {
+        "title": "Cancel or mark a meeting",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": true,

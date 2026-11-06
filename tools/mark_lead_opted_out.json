@@ -15,6 +15,7 @@
         ]
     },
     "annotations": {
+        "title": "Stop texting a lead",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

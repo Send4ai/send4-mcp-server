@@ -57,6 +57,7 @@
         ]
     },
     "annotations": {
+        "title": "Preview a campaign launch",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

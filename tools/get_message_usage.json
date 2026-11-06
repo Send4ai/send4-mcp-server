@@ -93,6 +93,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "Message usage",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

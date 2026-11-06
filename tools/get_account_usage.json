@@ -13,6 +13,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "Plan usage this month",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

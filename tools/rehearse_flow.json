@@ -46,6 +46,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "Rehearse a flow",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": true,

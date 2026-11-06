@@ -19,6 +19,7 @@
         ]
     },
     "annotations": {
+        "title": "Campaign report",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

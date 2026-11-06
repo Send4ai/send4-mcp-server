@@ -12,6 +12,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "Team members",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

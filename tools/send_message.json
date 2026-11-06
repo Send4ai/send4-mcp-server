@@ -20,6 +20,7 @@
         ]
     },
     "annotations": {
+        "title": "Reply to a customer",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": true,

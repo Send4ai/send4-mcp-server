@@ -32,6 +32,7 @@
         ]
     },
     "annotations": {
+        "title": "Read a conversation",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

@@ -16,6 +16,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "Why a conversation went wrong",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

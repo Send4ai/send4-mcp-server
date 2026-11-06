@@ -35,6 +35,7 @@
         ]
     },
     "annotations": {
+        "title": "Suggest a card change",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

@@ -19,6 +19,7 @@
         ]
     },
     "annotations": {
+        "title": "Resume a campaign",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": true,

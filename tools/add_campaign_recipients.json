@@ -20,6 +20,7 @@
         ]
     },
     "annotations": {
+        "title": "Add people to a campaign",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": true,

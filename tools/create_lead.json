@@ -38,6 +38,7 @@
         ]
     },
     "annotations": {
+        "title": "Add a lead",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

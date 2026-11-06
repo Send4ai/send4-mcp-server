@@ -20,6 +20,7 @@
         ]
     },
     "annotations": {
+        "title": "Invite a team member",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": true,

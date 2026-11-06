@@ -92,6 +92,7 @@
         ]
     },
     "annotations": {
+        "title": "Change a flow",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

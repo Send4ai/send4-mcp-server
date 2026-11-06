@@ -30,6 +30,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "Meetings",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

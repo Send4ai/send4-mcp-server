@@ -46,6 +46,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "List leads",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

@@ -15,6 +15,7 @@
         ]
     },
     "annotations": {
+        "title": "Draw a flow map",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

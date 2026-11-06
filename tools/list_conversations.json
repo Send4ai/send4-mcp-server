@@ -71,6 +71,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "List conversations",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

@@ -15,6 +15,7 @@
         ]
     },
     "annotations": {
+        "title": "Take over from the AI",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

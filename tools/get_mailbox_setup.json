@@ -7,6 +7,7 @@
         "properties": {}
     },
     "annotations": {
+        "title": "Email setup",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

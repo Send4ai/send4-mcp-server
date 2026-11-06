@@ -31,6 +31,7 @@
         ]
     },
     "annotations": {
+        "title": "Text someone first",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": true,

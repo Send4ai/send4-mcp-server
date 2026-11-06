@@ -28,6 +28,7 @@
         ]
     },
     "annotations": {
+        "title": "Find free meeting times",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

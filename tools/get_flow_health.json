@@ -22,6 +22,7 @@
         ]
     },
     "annotations": {
+        "title": "Flow health",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

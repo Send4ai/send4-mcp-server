@@ -27,6 +27,7 @@
         ]
     },
     "annotations": {
+        "title": "Change a team member",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

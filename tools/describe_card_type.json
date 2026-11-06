@@ -18,6 +18,7 @@
         ]
     },
     "annotations": {
+        "title": "Explain a card type",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

@@ -83,6 +83,7 @@
         ]
     },
     "annotations": {
+        "title": "Create a campaign draft",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

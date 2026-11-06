@@ -15,6 +15,7 @@
         ]
     },
     "annotations": {
+        "title": "Read a campaign",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

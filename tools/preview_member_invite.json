@@ -27,6 +27,7 @@
         ]
     },
     "annotations": {
+        "title": "Preview inviting a team member",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

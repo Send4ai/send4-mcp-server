@@ -15,6 +15,7 @@
         ]
     },
     "annotations": {
+        "title": "Duplicate a flow",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

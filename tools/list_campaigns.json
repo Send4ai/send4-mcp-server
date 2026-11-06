@@ -58,6 +58,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "List campaigns",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

@@ -24,6 +24,7 @@
         ]
     },
     "annotations": {
+        "title": "Preview switching a flow on or off",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

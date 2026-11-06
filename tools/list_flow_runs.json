@@ -48,6 +48,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "List flow runs",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

@@ -19,6 +19,7 @@
         ]
     },
     "annotations": {
+        "title": "Pause a campaign",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,

@@ -34,6 +34,7 @@
         ]
     },
     "annotations": {
+        "title": "Read a flow",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

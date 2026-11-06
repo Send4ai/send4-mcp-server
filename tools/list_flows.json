@@ -32,6 +32,7 @@
         "type": "object"
     },
     "annotations": {
+        "title": "List flows",
         "readOnlyHint": true,
         "destructiveHint": false,
         "openWorldHint": false,

@@ -67,6 +67,7 @@
         ]
     },
     "annotations": {
+        "title": "Change a campaign",
         "readOnlyHint": false,
         "destructiveHint": true,
         "openWorldHint": false,
