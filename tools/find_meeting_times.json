@@ -1,7 +1,7 @@
 {
     "name": "find_meeting_times",
     "title": "Find free meeting times",
-    "description": "The free times and the booking rules for a conversation's customer, from `from` for `days`\ndays, in the workspace's timezone. With `meeting_id` (from `list_meetings`) they are the\ntimes that meeting could move to. Nothing is booked.",
+    "description": "The free times and the booking rules for a conversation's customer, from `from` for `days`\ndays, in the workspace's timezone. With `meeting_id` (from `list_meetings`) they are the\ntimes that meeting could move to. A day outside the booking rules says why in\n`outside_rules`: `book_meeting` takes its times only with `outside_rules_ok`, after the\nperson agrees. Nothing is booked.",
     "inputSchema": {
         "properties": {
             "conversation_id": {
