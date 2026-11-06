@@ -6,7 +6,7 @@ registration. It carries no client ID and no secret.
 
 | File | What it is |
 |---|---|
-| `plugin.json` | The listing: name, short and long description, links, prompts, colour, icons |
+| `plugin.json` | The listing: name, short and long description, website / support / privacy / terms links, prompts, colour, icons |
 | `mcp.json` | The server and how to sign in (`streamable-http`, OAuth, `dcr`) |
 | `assets/logo.svg`, `assets/icon.svg` | The Send4 mark (square, 48×48 view box). `icon.svg` is Codex's composer icon |
 
