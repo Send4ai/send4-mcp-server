@@ -1,0 +1,47 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "send4",
+  "version": "1.0.0",
+  "description": "Build AI lead qualification flows, run SMS and email campaigns, and book meetings in your Send4 workspace.",
+  "author": {
+    "name": "Nord it, UAB",
+    "email": "support@send4.ai",
+    "url": "https://send4.ai"
+  },
+  "homepage": "https://send4.ai",
+  "repository": "https://github.com/send4ai/send4-mcp-server",
+  "license": "MIT",
+  "keywords": [
+    "sms",
+    "lead-qualification",
+    "sales",
+    "appointments",
+    "campaigns"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Send4",
+        "shortDescription": "AI lead qualification flows",
+        "longDescription": "Connect ChatGPT or Codex to Send4 for AI lead qualification, automated follow-up and appointment booking. Describe how you want leads handled, and the assistant builds a Send4 flow that follows up by SMS or email, asks qualifying questions, answers customer questions and books meetings with your team.\n\nBuild: Say what you need to know before a sales call, such as budget, timing, location and requirements, and what should happen with each answer. The assistant builds your flow, lets you test it as a customer and checks it for issues before it goes live. Changes to a live flow are made on a draft copy.\n\nRun: Launch SMS and email campaigns to existing leads, review conversations, reply yourself or hand the conversation back to Send4's AI. Book or reschedule meetings from the chat.\n\nImprove: Ask about common customer questions and objections, where leads drop off and why conversations stop. Review campaign results, meeting bookings and plan usage in plain language.\n\nStay in control: Your workspace admin decides whether assistants can connect and what they may change. You choose permissions when connecting. Launching a campaign and switching a flow on need your confirmation. Every change is recorded in Send4's audit log as made through an AI assistant.\n\nRequires a Send4 workspace on a paid plan or a trial with a card on file, with AI assistants switched on by an admin.",
+        "developerName": "Nord it, UAB",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://send4.ai",
+        "privacyPolicyURL": "https://send4.ai/privacy",
+        "termsOfServiceURL": "https://send4.ai/terms",
+        "defaultPrompt": [
+          "What flows do I have in Send4, and what does each one do?",
+          "How did my last Send4 campaign do?",
+          "Why did my most recent failed Send4 conversation stop?"
+        ],
+        "brandColor": "#059669",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/logo.svg"
+      }
+    }
+  }
+}
