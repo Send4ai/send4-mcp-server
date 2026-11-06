@@ -35,9 +35,9 @@
         "privacyPolicyURL": "https://send4.ai/privacy",
         "termsOfServiceURL": "https://send4.ai/terms",
         "defaultPrompt": [
-          "What flows do I have in Send4, and what does each one do?",
-          "How did my last Send4 campaign do?",
-          "Why did my most recent failed Send4 conversation stop?"
+          "Build a Send4 flow for leads from my website's inquiry form: text them right away, ask their budget and timing, and book a call.",
+          "Rehearse my new Send4 flow as a customer and tell me what to fix before it goes live.",
+          "Where do leads drop off in my Send4 flows, and why?"
         ],
         "brandColor": "#059669",
         "composerIcon": "./assets/icon.svg",
