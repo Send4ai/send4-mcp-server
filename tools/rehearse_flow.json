@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "flow_id": {
+                "description": "To start: from `list_flows`.",
                 "type": "integer"
             },
             "mode": {
@@ -18,18 +19,23 @@
                 "type": "string"
             },
             "conversation_id": {
+                "description": "To go on: from an earlier answer of this tool.",
                 "type": "integer"
             },
             "say": {
+                "description": "What the customer writes.",
                 "type": "string"
             },
             "context": {
+                "description": "`campaign` mode: the list columns.",
                 "type": "object"
             },
             "payload": {
+                "description": "`webhook` mode: the request body.",
                 "type": "object"
             },
             "control": {
+                "description": "With `conversation_id`.",
                 "enum": [
                     "skip_wait",
                     "end_tail"

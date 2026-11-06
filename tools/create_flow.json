@@ -9,6 +9,7 @@
                 "type": "string"
             },
             "template_key": {
+                "description": "From `list_flow_templates`. Leave it out for a blank flow.",
                 "type": "string"
             },
             "settings": {
@@ -20,7 +21,7 @@
     },
     "annotations": {
         "readOnlyHint": false,
-        "destructiveHint": false,
+        "destructiveHint": true,
         "openWorldHint": false,
         "idempotentHint": false
     },

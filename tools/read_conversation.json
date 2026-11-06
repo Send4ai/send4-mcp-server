@@ -5,19 +5,23 @@
     "inputSchema": {
         "properties": {
             "conversation_id": {
+                "description": "From `list_conversations`.",
                 "minimum": 1,
                 "type": "integer"
             },
             "limit": {
+                "description": "Messages a page, at most 100. Default 50.",
                 "minimum": 1,
                 "maximum": 100,
                 "type": "integer"
             },
             "cursor": {
+                "description": "`next_cursor` of the previous page.",
                 "minimum": 1,
                 "type": "integer"
             },
             "run_id": {
+                "description": "From `list_flow_runs`.",
                 "minimum": 1,
                 "type": "integer"
             }

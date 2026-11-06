@@ -5,9 +5,11 @@
     "inputSchema": {
         "properties": {
             "campaign_id": {
+                "description": "From `list_campaigns`.",
                 "type": "integer"
             },
             "pace": {
+                "description": "`count` new people every `every_minutes` minutes.",
                 "properties": {
                     "count": {
                         "type": "integer"
@@ -19,6 +21,7 @@
                 "type": "object"
             },
             "send_window": {
+                "description": "Workspace time, or null for any time.",
                 "properties": {
                     "start": {
                         "description": "HH:MM",
@@ -39,6 +42,7 @@
                 "type": "object"
             },
             "goal": {
+                "description": "As in `create_campaign`, or null to clear it.",
                 "properties": {
                     "card_id": {
                         "type": "integer"
@@ -53,6 +57,7 @@
                 "type": "object"
             },
             "resume_at": {
+                "description": "e.g. \"2026-11-03 09:00\", workspace time, or null.",
                 "type": "string"
             }
         },

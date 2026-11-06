@@ -1,7 +1,7 @@
 {
     "name": "get_mailbox_setup",
     "title": "Email setup",
-    "description": "Whether this workspace can have an email address on Send4 and on which domains, whether it can connect its own mailbox, and the Send4 page that does, per mail provider.",
+    "description": "Says whether this workspace can have an email address on Send4 and on which domains, whether it can\nconnect its own mailbox, and, per mail provider, the Send4 page that connects one. `create_mailbox`\nmakes the Send4 address; `list_channels` lists the mailboxes it has.",
     "inputSchema": {
         "type": "object",
         "properties": {}

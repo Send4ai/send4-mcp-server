@@ -1,10 +1,11 @@
 {
     "name": "check_flow",
     "title": "Check a flow",
-    "description": "Everything the flow builder would flag on a flow: each issue's severity (an `error` blocks switching\nit on, a `warning` never does), a plain message, and the card, trigger, outcome or field it is\nabout.",
+    "description": "Lists everything the flow builder would flag on a flow: each issue's severity (an `error` blocks\nswitching it on, a `warning` never does), a plain message, and the card, trigger, outcome or field it is\nabout. No issues means nothing to fix. Drafts and live flows alike. `get_flow_health` says how its runs\nwent; `read_flow` shows its cards.",
     "inputSchema": {
         "properties": {
             "flow_id": {
+                "description": "From `list_flows`.",
                 "type": "integer"
             }
         },

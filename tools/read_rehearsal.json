@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "conversation_id": {
+                "description": "From `rehearse_flow`.",
                 "type": "integer"
             },
             "after_message_id": {

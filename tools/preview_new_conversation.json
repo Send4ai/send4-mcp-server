@@ -9,6 +9,7 @@
                 "type": "integer"
             },
             "phone": {
+                "description": "Without a +, read in the sending number's country.",
                 "type": "string"
             },
             "body": {

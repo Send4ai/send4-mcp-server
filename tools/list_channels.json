@@ -1,7 +1,7 @@
 {
     "name": "list_channels",
     "title": "Numbers and mailboxes",
-    "description": "The workspace's sending numbers, mailboxes and web chat widgets: id, type, the number or address,\nwhether it is active, and whether a campaign may send from it (`campaign_sender`), and why not. A connected mailbox also has `connection`: whether it works, and what is wrong if not.",
+    "description": "Lists the workspace's sending numbers, mailboxes and web chat widgets: id, type, the number or address,\nwhether it is active, and whether a campaign may send from it (`campaign_sender`), and why not. A\nconnected mailbox also has `connection`: whether it works, and what is wrong if not. `get_mailbox_setup`\nsays how to add a mailbox.",
     "inputSchema": {
         "properties": {
             "include_inactive": {

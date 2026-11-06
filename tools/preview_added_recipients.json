@@ -5,9 +5,11 @@
     "inputSchema": {
         "properties": {
             "campaign_id": {
+                "description": "From `list_campaigns`.",
                 "type": "integer"
             },
             "lead_ids": {
+                "description": "From `list_leads`.",
                 "items": {
                     "type": "integer"
                 },
@@ -21,6 +23,7 @@
                 "type": "array"
             },
             "tag_match": {
+                "description": "With several tags: leads with `any` (default) or `all` of them.",
                 "enum": [
                     "any",
                     "all"

@@ -5,15 +5,18 @@
     "inputSchema": {
         "properties": {
             "search": {
+                "description": "Phone, first or last name, or email.",
                 "type": "string"
             },
             "tag_ids": {
+                "description": "From this answer's `tags`.",
                 "items": {
                     "type": "integer"
                 },
                 "type": "array"
             },
             "source": {
+                "description": "`import`: added by a spreadsheet import.",
                 "enum": [
                     "import",
                     "other"
@@ -21,6 +24,7 @@
                 "type": "string"
             },
             "sms": {
+                "description": "Whether the number opted out of SMS.",
                 "enum": [
                     "opted_out",
                     "not_opted_out"
@@ -28,11 +32,13 @@
                 "type": "string"
             },
             "limit": {
+                "description": "Rows a page, at most 100. Default 50.",
                 "minimum": 1,
                 "maximum": 100,
                 "type": "integer"
             },
             "page": {
+                "description": "From 1.",
                 "minimum": 1,
                 "type": "integer"
             }

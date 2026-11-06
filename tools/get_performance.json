@@ -1,7 +1,7 @@
 {
     "name": "get_performance",
     "title": "Conversation performance",
-    "description": "The Analytics Performance page: conversations started, replied, gave the details asked for,\nand booked, what it cost, and how those moved over time, for a date range and filters, per flow with `breakdown` and against the previous period with `compare`. By default the last 30 days by\nweek, in UTC days. `conversations_started` counts conversations a flow or person sent to;\n Costs are at the workspace's own SMS price. `whole_period: false`\nmarks a bucket the range or today cuts short. `totals` counts each conversation once, so it is not the sum of\nthe buckets. Rehearsals never count.",
+    "description": "Reads the Analytics Performance page: conversations started, replied, gave the details asked for, and\nbooked, what it cost, and how those moved over time, for a date range and filters, per flow with\n`breakdown` and against the previous period with `compare`. By default the last 30 days by week, in UTC\ndays. `conversations_started` counts conversations a flow or person sent to; `reply_rate_pct` is the\nshare who answered. Costs are at the workspace's own SMS price. `whole_period: false` marks a bucket the\nrange or today cuts short. `totals` counts each conversation once, so it is not the sum of the buckets.\nRehearsals never count. `get_drop_off` shows where conversations stop.",
     "inputSchema": {
         "properties": {
             "from": {
@@ -13,6 +13,7 @@
                 "type": "string"
             },
             "interval": {
+                "description": "Bucket size.",
                 "enum": [
                     "day",
                     "week",
@@ -21,39 +22,46 @@
                 "type": "string"
             },
             "compare": {
+                "description": "Also the period of the same length just before.",
                 "type": "boolean"
             },
             "flow_id": {
+                "description": "From `list_flows`.",
                 "items": {
                     "type": "integer"
                 },
                 "type": "array"
             },
             "channel_id": {
+                "description": "From `list_channels`.",
                 "items": {
                     "type": "integer"
                 },
                 "type": "array"
             },
             "campaign_id": {
+                "description": "From `list_campaigns`.",
                 "items": {
                     "type": "integer"
                 },
                 "type": "array"
             },
             "assigned_user_id": {
+                "description": "Conversation owners, from `list_members`.",
                 "items": {
                     "type": "integer"
                 },
                 "type": "array"
             },
             "trigger_type": {
+                "description": "Trigger types, e.g. `webhook` or `campaign`.",
                 "items": {
                     "type": "string"
                 },
                 "type": "array"
             },
             "direction": {
+                "description": "The page's Direction filter.",
                 "enum": [
                     "inbound",
                     "outbound"
@@ -61,6 +69,7 @@
                 "type": "string"
             },
             "channel_type": {
+                "description": "Channel kinds.",
                 "items": {
                     "enum": [
                         "sms",

@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "phone": {
+                "description": "With a +, or local to `country`.",
                 "type": "string"
             },
             "country": {
@@ -12,15 +13,19 @@
                 "type": "string"
             },
             "first_name": {
+                "description": "Given name.",
                 "type": "string"
             },
             "last_name": {
+                "description": "Family name.",
                 "type": "string"
             },
             "email": {
+                "description": "Their email address.",
                 "type": "string"
             },
             "tag_ids": {
+                "description": "From `list_leads`' `tags`.",
                 "items": {
                     "type": "integer"
                 },
@@ -34,7 +39,7 @@
     },
     "annotations": {
         "readOnlyHint": false,
-        "destructiveHint": false,
+        "destructiveHint": true,
         "openWorldHint": false,
         "idempotentHint": false
     }

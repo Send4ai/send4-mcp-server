@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "action": {
+                "description": "Put the tags on or take them off.",
                 "enum": [
                     "add",
                     "remove"
@@ -12,12 +13,14 @@
                 "type": "string"
             },
             "lead_ids": {
+                "description": "From `list_leads`.",
                 "items": {
                     "type": "integer"
                 },
                 "type": "array"
             },
             "matching": {
+                "description": "`list_leads`' filters and the `total` it gave.",
                 "properties": {
                     "expected_count": {
                         "type": "integer"
@@ -57,6 +60,7 @@
                 "type": "array"
             },
             "tag_name": {
+                "description": "Created when no tag has this name.",
                 "type": "string"
             }
         },
@@ -67,7 +71,7 @@
     },
     "annotations": {
         "readOnlyHint": false,
-        "destructiveHint": false,
+        "destructiveHint": true,
         "openWorldHint": false,
         "idempotentHint": true
     }

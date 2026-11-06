@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "status": {
+                "description": "Any of these.",
                 "items": {
                     "enum": [
                         "draft",
@@ -19,6 +20,7 @@
                 "type": "array"
             },
             "flow_id": {
+                "description": "From `list_flows`.",
                 "items": {
                     "type": "integer"
                 },
@@ -33,6 +35,7 @@
                 "type": "string"
             },
             "archived": {
+                "description": "Default `exclude`.",
                 "enum": [
                     "exclude",
                     "only",
@@ -41,11 +44,13 @@
                 "type": "string"
             },
             "limit": {
+                "description": "Rows a page, at most 100. Default 25.",
                 "minimum": 1,
                 "maximum": 100,
                 "type": "integer"
             },
             "page": {
+                "description": "From 1.",
                 "minimum": 1,
                 "type": "integer"
             }

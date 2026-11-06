@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "campaign_id": {
+                "description": "From `list_campaigns`.",
                 "type": "integer"
             },
             "confirmation": {

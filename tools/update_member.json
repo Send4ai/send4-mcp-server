@@ -5,9 +5,11 @@
     "inputSchema": {
         "properties": {
             "member_id": {
+                "description": "From `list_members`.",
                 "type": "integer"
             },
             "role": {
+                "description": "Manager or agent. Nobody becomes an admin here.",
                 "enum": [
                     "client_manager",
                     "client_agent"

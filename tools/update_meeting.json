@@ -5,9 +5,11 @@
     "inputSchema": {
         "properties": {
             "meeting_id": {
+                "description": "From `list_meetings`.",
                 "type": "integer"
             },
             "status": {
+                "description": "What became of it.",
                 "enum": [
                     "cancelled",
                     "completed",
@@ -16,6 +18,7 @@
                 "type": "string"
             },
             "notify_customer": {
+                "description": "Cancel only: text the customer `message`.",
                 "type": "boolean"
             },
             "message": {

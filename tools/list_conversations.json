@@ -1,10 +1,11 @@
 {
     "name": "list_conversations",
     "title": "List conversations",
-    "description": "The inbox, most recently active first, 50 a page, filtered like the Conversations page. Each row: status and why, channel\nkind, flow and run, owner, when it last moved, and the customer: name only with the conversation-content permission,\ncontact details always masked. No message text.",
+    "description": "Lists the inbox, most recently active first, 50 a page, filtered like the Conversations page. Each row:\nstatus and why, channel kind, flow and run, owner, when it last moved, and the customer: name only with\nthe conversation-content permission, contact details always masked. No message text: `read_conversation`\nhas it, and `explain_conversation` says why one went as it did.",
     "inputSchema": {
         "properties": {
             "status": {
+                "description": "Any of these.",
                 "items": {
                     "type": "string"
                 },
@@ -15,27 +16,32 @@
                 "type": "string"
             },
             "flow_id": {
+                "description": "From `list_flows`.",
                 "items": {
                     "type": "integer"
                 },
                 "type": "array"
             },
             "campaign_id": {
+                "description": "From `list_campaigns`.",
                 "items": {
                     "type": "integer"
                 },
                 "type": "array"
             },
             "channel_type": {
+                "description": "`sms`, `email`, `web_widget` or `email_inbox`.",
                 "items": {
                     "type": "string"
                 },
                 "type": "array"
             },
             "replied": {
+                "description": "true: the customer wrote at least once.",
                 "type": "boolean"
             },
             "meeting_booked": {
+                "description": "true: a meeting is still scheduled.",
                 "type": "boolean"
             },
             "search": {
@@ -51,11 +57,13 @@
                 "type": "string"
             },
             "limit": {
+                "description": "Rows a page, at most 100. Default 50.",
                 "minimum": 1,
                 "maximum": 100,
                 "type": "integer"
             },
             "page": {
+                "description": "From 1.",
                 "minimum": 1,
                 "type": "integer"
             }

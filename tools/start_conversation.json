@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "channel_id": {
+                "description": "From `list_channels`.",
                 "type": "integer"
             },
             "lead_id": {

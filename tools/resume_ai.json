@@ -1,10 +1,11 @@
 {
     "name": "resume_ai",
     "title": "Let the AI answer again",
-    "description": "Hand a paused conversation back to the AI: the flow answers again and a timer it held is re-armed. A conversation the flow failed on is retried on the card that failed.",
+    "description": "Hands a paused conversation back to the AI: the flow answers again, so it can text the customer, and a\ntimer it held is re-armed. A conversation the flow failed on is retried on the card that failed.\n`take_over_conversation` does the opposite.",
     "inputSchema": {
         "properties": {
             "conversation_id": {
+                "description": "A paused conversation, from `list_conversations`.",
                 "type": "integer"
             }
         },

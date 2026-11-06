@@ -5,9 +5,11 @@
     "inputSchema": {
         "properties": {
             "flow_id": {
+                "description": "From `list_flows`.",
                 "type": "integer"
             },
             "status": {
+                "description": "`active` switches it on, `inactive` off.",
                 "enum": [
                     "active",
                     "inactive"

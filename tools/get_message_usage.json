@@ -1,7 +1,7 @@
 {
     "name": "get_message_usage",
     "title": "Message usage",
-    "description": "The Analytics Messages page: messages and SMS parts sent and received in a range (this month by default), their cost at\nthe workspace's SMS price, the monthly SMS-part limit and how much is used, a series, and a breakdown by `group_by`.\nUTC days, as on the page. ",
+    "description": "Reads the Analytics Messages page: messages and SMS parts sent and received in a range (this month by\ndefault), their cost at the workspace's SMS price, the monthly SMS-part limit and how much is used, a\nseries, and a breakdown by `group_by`. UTC days, as on the page. `get_account_usage` has every plan cap;\n`get_performance` counts conversations and bookings.",
     "inputSchema": {
         "properties": {
             "from": {
@@ -13,6 +13,7 @@
                 "type": "string"
             },
             "interval": {
+                "description": "Bucket size.",
                 "enum": [
                     "day",
                     "week",
@@ -21,39 +22,46 @@
                 "type": "string"
             },
             "compare": {
+                "description": "Also the period of the same length just before.",
                 "type": "boolean"
             },
             "flow_id": {
+                "description": "From `list_flows`.",
                 "items": {
                     "type": "integer"
                 },
                 "type": "array"
             },
             "channel_id": {
+                "description": "From `list_channels`.",
                 "items": {
                     "type": "integer"
                 },
                 "type": "array"
             },
             "campaign_id": {
+                "description": "From `list_campaigns`.",
                 "items": {
                     "type": "integer"
                 },
                 "type": "array"
             },
             "assigned_user_id": {
+                "description": "Conversation owners, from `list_members`.",
                 "items": {
                     "type": "integer"
                 },
                 "type": "array"
             },
             "trigger_type": {
+                "description": "Trigger types, e.g. `webhook` or `campaign`.",
                 "items": {
                     "type": "string"
                 },
                 "type": "array"
             },
             "direction": {
+                "description": "The page's Direction filter.",
                 "enum": [
                     "inbound",
                     "outbound"
@@ -61,6 +69,7 @@
                 "type": "string"
             },
             "channel_type": {
+                "description": "Channel kinds.",
                 "items": {
                     "enum": [
                         "sms",

@@ -1,10 +1,11 @@
 {
     "name": "get_flow_map",
     "title": "Draw a flow map",
-    "description": "The shape of one flow — its cards, where each outcome leads, the start card and\nthe trigger types — for the flow map view. Use `read_flow` to read a flow.",
+    "description": "The shape of one flow — its cards, where each outcome leads, the start card and the trigger types — for\nthe flow map view. `read_flow` has the cards' settings and wording; `check_flow` lists what is wrong.",
     "inputSchema": {
         "properties": {
             "flow_id": {
+                "description": "From `list_flows`.",
                 "type": "integer"
             }
         },

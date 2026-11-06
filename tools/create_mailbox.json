@@ -1,7 +1,7 @@
 {
     "name": "create_mailbox",
     "title": "Create an email address",
-    "description": "Create an email address on Send4. It sends nothing until a flow or a campaign uses it.",
+    "description": "Creates an email address on Send4, on a domain `get_mailbox_setup` offers. It sends nothing until a flow\nor a campaign uses it. An address already in use is refused, so a repeat creates nothing.",
     "inputSchema": {
         "properties": {
             "name": {
@@ -24,7 +24,7 @@
     },
     "annotations": {
         "readOnlyHint": false,
-        "destructiveHint": false,
+        "destructiveHint": true,
         "openWorldHint": false,
         "idempotentHint": false
     }

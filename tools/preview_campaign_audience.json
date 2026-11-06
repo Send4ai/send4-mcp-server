@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "flow_id": {
+                "description": "The flow it will send, from `list_flows`.",
                 "type": "integer"
             },
             "channel_id": {
@@ -12,6 +13,7 @@
                 "type": "integer"
             },
             "lead_ids": {
+                "description": "From `list_leads`.",
                 "items": {
                     "type": "integer"
                 },
@@ -25,6 +27,7 @@
                 "type": "array"
             },
             "tag_match": {
+                "description": "With several tags: leads with `any` (default) or `all` of them.",
                 "enum": [
                     "any",
                     "all"
@@ -32,6 +35,7 @@
                 "type": "string"
             },
             "pasted_recipients": {
+                "description": "The list, laid out as above.",
                 "type": "string"
             }
         },

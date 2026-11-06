@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "lead_id": {
+                "description": "From `list_leads`.",
                 "type": "integer"
             }
         },

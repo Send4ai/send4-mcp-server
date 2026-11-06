@@ -5,9 +5,11 @@
     "inputSchema": {
         "properties": {
             "flow_id": {
+                "description": "A draft or inactive flow, from `list_flows`.",
                 "type": "integer"
             },
             "changes": {
+                "description": "The changes in order, each one of the ops above.",
                 "items": {
                     "properties": {
                         "op": {

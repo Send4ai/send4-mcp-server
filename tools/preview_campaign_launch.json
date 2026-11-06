@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "campaign_id": {
+                "description": "A draft, from `list_campaigns`.",
                 "type": "integer"
             },
             "scheduled_at": {

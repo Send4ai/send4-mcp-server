@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "flow_id": {
+                "description": "From `list_flows`.",
                 "type": "integer"
             },
             "days": {

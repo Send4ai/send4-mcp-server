@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "conversation_id": {
+                "description": "From `list_conversations`.",
                 "type": "integer"
             },
             "body": {

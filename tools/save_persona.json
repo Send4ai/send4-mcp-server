@@ -5,36 +5,93 @@
     "inputSchema": {
         "properties": {
             "persona_id": {
+                "description": "From `list_personas`. Leave it out to create one.",
                 "type": "integer"
             },
             "name": {
+                "description": "At most 60 characters.",
                 "type": "string"
             },
             "role_line": {
+                "description": "Who it is, in one line of at most 160 characters.",
                 "type": "string"
             },
             "instructions": {
+                "description": "Its standing instructions, at most 4,000 characters.",
                 "type": "string"
             },
             "guardrails": {
+                "description": "What it must stay away from, at most 2,000 characters.",
                 "type": "string"
             },
             "behavior_rules": {
+                "description": "The switches that are on. A new persona gets the defaults.",
                 "items": {
+                    "enum": [
+                        "include_emojis",
+                        "use_first_name_only",
+                        "no_pricing",
+                        "one_question",
+                        "no_fabrication",
+                        "use_context",
+                        "avoid_repetition",
+                        "handoff_when_unsure"
+                    ],
                     "type": "string"
                 },
                 "type": "array"
             },
             "tone": {
+                "description": "How it sounds.",
+                "enum": [
+                    "friendly",
+                    "professional",
+                    "concise",
+                    "empathetic",
+                    "playful",
+                    "formal"
+                ],
                 "type": "string"
             },
             "language": {
+                "description": "The language it writes in.",
+                "enum": [
+                    "en",
+                    "lt",
+                    "lv",
+                    "et",
+                    "pl",
+                    "de",
+                    "fr",
+                    "es",
+                    "it",
+                    "pt",
+                    "nl",
+                    "sv",
+                    "da",
+                    "fi",
+                    "no",
+                    "uk",
+                    "ru"
+                ],
                 "type": "string"
             },
             "avatar_emoji": {
+                "description": "One of the persona editor's emoji.",
                 "type": "string"
             },
             "avatar_color": {
+                "description": "The avatar background.",
+                "enum": [
+                    "violet",
+                    "indigo",
+                    "sky",
+                    "emerald",
+                    "rose",
+                    "orange",
+                    "teal",
+                    "slate"
+                ],
                 "type": "string"
             }
         },
@@ -42,7 +99,7 @@
     },
     "annotations": {
         "readOnlyHint": false,
-        "destructiveHint": false,
+        "destructiveHint": true,
         "openWorldHint": false,
         "idempotentHint": false
     }

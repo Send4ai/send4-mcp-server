@@ -5,6 +5,7 @@
     "inputSchema": {
         "properties": {
             "status": {
+                "description": "Only meetings in this state.",
                 "enum": [
                     "scheduled",
                     "completed",

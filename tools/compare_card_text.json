@@ -1,19 +1,23 @@
 {
     "name": "compare_card_text",
     "title": "Compare card text",
-    "description": "Diff new wording against a card's live text. Saves nothing. Without `card_id`, `field` is `persona.instructions` or `persona.guardrails`.",
+    "description": "Diffs new wording against a card's live text, sentence by sentence, and saves nothing. Without\n`card_id`, `field` is `persona.instructions` or `persona.guardrails`. `suggest_card_change` stores\nwording for a card, for a person to accept.",
     "inputSchema": {
         "properties": {
             "flow_id": {
+                "description": "From `list_flows`.",
                 "type": "integer"
             },
             "card_id": {
+                "description": "From `read_flow`. Leave it out for the persona.",
                 "type": "integer"
             },
             "field": {
+                "description": "A text setting of the card, e.g. `instructions`. A refusal lists the card's.",
                 "type": "string"
             },
             "new_text": {
+                "description": "The whole new text, at most 20,000 characters.",
                 "type": "string"
             }
         },

@@ -1,22 +1,27 @@
 {
     "name": "suggest_card_change",
     "title": "Suggest a card change",
-    "description": "Store new wording for one card's text field, for a person to accept in the builder. Changes nothing live, so it also works on a live flow.",
+    "description": "Stores new wording for one card's text field, for a person to accept in the builder. Changes nothing\nlive, so it also works on a live flow. `compare_card_text` shows the diff without storing it.",
     "inputSchema": {
         "properties": {
             "flow_id": {
+                "description": "From `list_flows`.",
                 "type": "integer"
             },
             "card_id": {
+                "description": "From `read_flow`.",
                 "type": "integer"
             },
             "field": {
+                "description": "A text setting of the card, e.g. `instructions`. A refusal lists the card's.",
                 "type": "string"
             },
             "new_text": {
+                "description": "The whole new text, at most 20,000 characters.",
                 "type": "string"
             },
             "reason": {
+                "description": "Why, for the person who accepts it. At most 500 characters.",
                 "type": "string"
             }
         },
@@ -31,7 +36,7 @@
     },
     "annotations": {
         "readOnlyHint": false,
-        "destructiveHint": false,
+        "destructiveHint": true,
         "openWorldHint": false,
         "idempotentHint": true
     }

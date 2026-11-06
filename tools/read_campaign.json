@@ -1,7 +1,7 @@
 {
     "name": "read_campaign",
     "title": "Read a campaign",
-    "description": "One campaign: status and why it is paused, flow and sender, when it started, pace, sending hours, reply window, progress and\nresults. Recipients are not listed.",
+    "description": "Reads one campaign: status and why it is paused, flow and sender, when it started, pace, sending hours,\nreply window, progress and results. Recipients are not listed; `get_campaign_report` breaks the results\ndown.",
     "inputSchema": {
         "properties": {
             "campaign_id": {
