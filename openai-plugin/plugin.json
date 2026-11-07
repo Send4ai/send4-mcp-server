@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "send4",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Build AI lead qualification flows, run SMS and email campaigns, and book meetings in your Send4 workspace.",
   "author": {
     "name": "Nord it, UAB",
@@ -23,9 +23,9 @@
       "interface": {
         "displayName": "Send4",
         "shortDescription": "AI lead qualification flows",
-        "longDescription": "Connect ChatGPT or Codex to Send4 for AI lead qualification, automated follow-up and appointment booking. Describe how you want leads handled, and the assistant builds a Send4 flow that follows up by SMS or email, asks qualifying questions, answers customer questions and books meetings with your team.\n\nBuild: Say what you need to know before a sales call, such as budget, timing, location and requirements, and what should happen with each answer. The assistant builds your flow, lets you test it as a customer and checks it for issues before it goes live. Changes to a live flow are made on a draft copy.\n\nRun: Launch SMS and email campaigns to existing leads, review conversations, reply yourself or hand the conversation back to Send4's AI. Book or reschedule meetings from the chat.\n\nImprove: Ask about common customer questions and objections, where leads drop off and why conversations stop. Review campaign results, meeting bookings and plan usage in plain language.\n\nStay in control: Your workspace admin decides whether assistants can connect and what they may change. You choose permissions when connecting. Launching a campaign and switching a flow on need your confirmation. Every change is recorded in Send4's audit log as made through an AI assistant.\n\nRequires a Send4 workspace on a paid plan or a trial with a card on file, with AI assistants switched on by an admin.",
+        "longDescription": "Connect ChatGPT or Codex to Send4 for AI lead qualification, automated follow-up and appointment booking. Describe how you want leads handled, and the assistant builds a Send4 flow that follows up by SMS or email, asks qualifying questions, answers customer questions and books meetings with your team.\n\nBuild: Say what you need to know before a sales call, such as budget, timing, location and requirements, and what should happen with each answer. The assistant builds your flow, lets you test it as a customer and checks it for issues before it goes live. Changes to a live flow are made on a draft copy.\n\nRun: Launch SMS and email campaigns to existing leads, review conversations, reply yourself or hand the conversation back to Send4's AI. Book or reschedule meetings from the chat.\n\nImprove: Ask about common customer questions and objections, where leads drop off and why conversations stop. Review campaign results, meeting bookings and message usage in plain language.\n\nStay in control: Your workspace admin decides whether assistants can connect and what they may change. You choose permissions when connecting. Launching a campaign and switching a flow on need your confirmation. Every change is recorded in Send4's audit log as made through an AI assistant.\n\nWorks with an existing Send4 workspace where an admin has switched AI assistants on.",
         "developerName": "Nord it, UAB",
-        "category": "Productivity",
+        "category": "Business & Operations",
         "capabilities": [
           "Read",
           "Write"
@@ -42,6 +42,61 @@
         "brandColor": "#059669",
         "composerIcon": "./assets/icon.svg",
         "logo": "./assets/logo.svg"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Build a draft flow for website inquiry-form leads",
+              "prompt": "Build a Send4 flow for leads from my website's inquiry form: text them right away, ask their budget and timing, and book a call.",
+              "tools_triggered": "get_flow_building_guide, describe_card_type, create_flow, edit_flow, check_flow",
+              "expected_behavior": "A new draft flow appears in Send4 and the answer links to it: a first message to the lead, a card that collects budget and timing, a booking card and team alerts. The flow stays a draft: nothing is switched on and nothing is sent. The review workspace's only phone number is switched off, so Send4 refuses a form trigger and the flow check reports the missing trigger; the answer says what is left before the flow could go live, such as connecting a number and the form."
+            },
+            {
+              "description": "Explain why a conversation stopped",
+              "prompt": "Why did Leo Specimen's conversation stop?",
+              "tools_triggered": "list_conversations, explain_conversation",
+              "expected_behavior": "The answer says the run failed because the AI request timed out, names the card it failed on, and links to the conversation in Send4."
+            },
+            {
+              "description": "Report a campaign's results",
+              "prompt": "How did the Six-month check-up reminders campaign do?",
+              "tools_triggered": "list_campaigns, get_campaign_report",
+              "expected_behavior": "The answer reports 4 people reached, 3 replied and 2 booked, against a goal of 3, with a link to the campaign in Send4."
+            },
+            {
+              "description": "List the scheduled meetings",
+              "prompt": "List the scheduled meetings in Send4 with their dates and who each one is with.",
+              "tools_triggered": "list_meetings",
+              "expected_behavior": "The answer lists three scheduled 30-minute meetings, with Noah Fixture, Grace Prototype and Finn Stub, with their dates and times in the workspace's timezone (Europe/Vilnius). Their dates are relative to when the review workspace was last refreshed, so they may already be in the past; they are still scheduled."
+            },
+            {
+              "description": "Change a live flow safely through a draft copy",
+              "prompt": "Duplicate Book an appointment, change the confirmation message to mention free parking, and rehearse it as a customer who wants a cleaning.",
+              "tools_triggered": "list_flows, duplicate_flow, read_flow, edit_flow, rehearse_flow, read_rehearsal",
+              "expected_behavior": "A draft copy of Book an appointment is created with a confirmation message that mentions free parking, and it is rehearsed on Send4's simulator as a customer who wants a cleaning. The original flow stays live and unchanged, and no real customer is texted."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Weather is not workspace data: Send4 holds a workspace's flows, conversations, leads, campaigns and meetings, and no weather. No Send4 tool should be called.",
+              "prompt": "What's the weather in Vilnius tomorrow?"
+            },
+            {
+              "description": "A writing request with no link to the workspace. No Send4 tool should be called; ChatGPT writes the poem itself.",
+              "prompt": "Write a short poem about the sea."
+            },
+            {
+              "description": "A personal email, not a message to one of the workspace's customers. No Send4 tool should be called and nothing is sent; ChatGPT drafts the text in the chat.",
+              "prompt": "Draft an email to my landlord about a broken heater."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Send4 for ChatGPT sells nothing and takes no payments. It works with a workspace the person already has."
+      },
+      "publication": {
+        "release_notes": "First public release. Connects ChatGPT and Codex to one Send4 workspace over OAuth 2.1 (dynamic client registration, PKCE). Up to 64 tools: 36 read-only, and 28 that change something, each marked destructive. A connection sees only the tools its permissions allow. Also 4 prompts and 3 interactive views: a flow map, a conversation thread and campaign results."
       }
     }
   }
