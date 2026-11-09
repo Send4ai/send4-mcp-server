@@ -163,8 +163,8 @@ signs in through your browser (OAuth with dynamic client registration).
 
 1. **A plan that includes it.** Every paid plan does, and so does the 14-day trial once a card is
    on file. Starter has no campaigns, so campaign tools aren't offered there.
-2. **A Client Admin switches it on.** In Send4, open **Settings → Integrations → AI assistants**
-   and turn on **Allow AI assistants** under **Workspace access**.
+2. **Your workspace allows it.** AI assistants are on for every workspace unless a Client Admin
+   has switched them off, under **Settings → Integrations → AI assistants**.
 3. **You sign in as yourself.** Each person connects with their own Send4 login.
 
 ## How it works
@@ -178,8 +178,8 @@ flowchart LR
 
 1. **You add the address** to your assistant.
 2. **You sign in to Send4** in your browser. Send4 shows the account you're signed in to and the
-   choices your role and your workspace allow. You tick what this assistant may do and select
-   **Connect**.
+   choices your role and your workspace allow, already ticked. You untick what this assistant
+   shouldn't do and select **Connect**.
 3. **The assistant asks Send4 for its tools.** It only hears about the tools this connection can use.
 4. **You ask in your own words.** The assistant picks the tools, and Send4 runs each one as you:
    your workspace, your role, your choices.
@@ -188,8 +188,8 @@ The workspace always comes from your sign-in. An assistant can't point a tool at
 
 ## Tools and permissions
 
-Every connection can read. Each kind of change is a separate permission, off until a Client Admin
-allows it for the workspace and you tick it when you connect.
+Every connection can read. Each kind of change is a separate permission: on for the workspace
+unless a Client Admin switches it off, and ticked when you connect unless you untick it.
 
 | Permission | What it allows |
 | --- | --- |
@@ -397,7 +397,7 @@ it to resume the AI. Needs **Reply to customers and manage conversations**.
 - **It acts as you.** Every tool runs in your workspace, with your role. It can't do more than you
   can in Send4.
 - **Your admin sets the limits, and you choose within them.** The workspace switches decide what
-  any assistant may do. When you connect, you tick what this one may do.
+  any assistant may do. When you connect, you untick what this one shouldn't do.
 - **Contact details are masked.** Read answers mask phone numbers and email addresses. Customer
   messages are shared only when the workspace allows conversation content and you tick
   **Read conversation messages**.
@@ -421,7 +421,7 @@ conversations also manage your team.
 
 ## Admin notes: managing access
 
-### Switch it on and choose what assistants may change
+### Choose what assistants may change
 
 In **Settings → Integrations → AI assistants**, under **Workspace access**:
 
@@ -432,7 +432,8 @@ In **Settings → Integrations → AI assistants**, under **Workspace access**:
   flows**, **Reply to customers and manage conversations**, **Create and launch campaigns**,
   **Invite and manage team members** and **Create email addresses**.
 
-All of these are off to begin with. See [docs/permissions.md](docs/permissions.md).
+All of these are on to begin with. Switch off what assistants shouldn't do. See
+[docs/permissions.md](docs/permissions.md).
 
 ### Monitor what assistants change
 
@@ -453,7 +454,7 @@ assistant, with the person who connected it.
 | --- | --- |
 | "Connecting AI assistants needs a plan, or a trial with a card on file" | A Client Admin sets up a plan under **Settings → Plan & billing**. |
 | The assistant can't connect at all | A Client Admin turns on **Allow AI assistants**. |
-| A tool you expected is missing | The workspace switch is off, you didn't tick it, or your role can't use it. Ask "What can you do in Send4?". |
+| A tool you expected is missing | The workspace switch is off, you unticked it, or your role can't use it. Ask "What can you do in Send4?". |
 | The sign-in page says you'll return to "an app on this computer" | Normal for Claude Code, VS Code, Cursor and terminal tools. Continue only if you started it from that app. |
 
 More in [docs/troubleshooting.md](docs/troubleshooting.md).
