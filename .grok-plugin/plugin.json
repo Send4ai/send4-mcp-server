@@ -1,0 +1,18 @@
+{
+  "name": "send4",
+  "version": "1.0.0",
+  "description": "Work in your Send4 workspace from Grok Build: build and rehearse SMS and email flows, run campaigns, read and answer conversations, book meetings, and see how your flows and campaigns perform. Sign in with your Send4 account and choose what Grok may do; no API key needed.",
+  "author": {
+    "name": "Send4",
+    "url": "https://send4.ai"
+  },
+  "repository": "https://github.com/send4ai/send4-mcp-server",
+  "homepage": "https://github.com/send4ai/send4-mcp-server",
+  "license": "MIT",
+  "keywords": [
+    "send4",
+    "send4-mcp",
+    "send4-flows",
+    "send4-campaigns"
+  ]
+}
