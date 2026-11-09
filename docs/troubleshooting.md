@@ -17,13 +17,13 @@ must be on before anyone can connect.
 An assistant is only told about the tools its connection can use. A tool is missing when:
 
 - the workspace switch for that kind of change is off,
-- you didn't tick it when you connected,
+- you unticked it when you connected,
 - your role can't use it (see [who can use what](permissions.md#who-can-use-what)), or
 - your plan doesn't include it. For example, Starter has no campaigns.
 
 Ask the assistant "What can you do in Send4?". It reads `get_context`, which lists what this
-connection was granted, what it wasn't, and who can allow the rest. To tick something you left
-out, disconnect the assistant and connect it again.
+connection was granted, what it wasn't, and who can allow the rest. To get back something you
+unticked, disconnect the assistant and connect it again.
 
 ## The Send4 screen says I'll return to "an app on this computer"
 

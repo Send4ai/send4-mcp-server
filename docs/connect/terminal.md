@@ -8,7 +8,7 @@ computer". That app is the tool you started.
 
 ## Before you start
 
-A Client Admin must have turned on **Allow AI assistants** for your workspace, under
+AI assistants are on for your workspace unless a Client Admin has switched them off, under
 **Settings → Integrations → AI assistants**. See [permissions](../permissions.md).
 
 ## opencode
@@ -63,7 +63,7 @@ your browser. Give it `https://mcp.send4.ai/mcp`.
 ## Choose what it may do
 
 Send4 shows the account you're signed in to, and only the choices your role and your workspace
-allow. Tick what the assistant may do, then select **Connect**.
+allow, already ticked. Untick what the assistant shouldn't do, then select **Connect**.
 
 If you leave a box unticked, the assistant can't do that. Before it launches a campaign, switches
 a flow on or off, or invites someone, Send4 makes it show you a summary and wait for your yes.

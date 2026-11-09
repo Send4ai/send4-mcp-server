@@ -5,7 +5,8 @@ Back to the [README](../README.md).
 Three things decide what a connected assistant may do, and each one can only narrow the one before:
 
 1. **The workspace.** A Client Admin chooses which kinds of change assistants may make at all.
-2. **The connection.** When you connect, you tick what this assistant may do.
+2. **The connection.** When you connect, everything the workspace allows is ticked, and you untick
+   what this assistant shouldn't do.
 3. **Your role.** An assistant never gets past what your own Send4 role allows.
 
 The plan sets a limit too. Every paid plan includes assistants, and so does the 14-day trial once
@@ -17,26 +18,26 @@ In Send4, open **Settings → Integrations → AI assistants**. Under **Workspac
 
 | Switch | Default | What it allows |
 | --- | --- | --- |
-| **Allow AI assistants** | Off | Anyone in the workspace can connect an assistant to their own account. It can read flows, runs, campaigns and usage, and it changes nothing unless one of the switches below is also on. |
-| **Allow conversation content** | Off | Connections may also read messages and the details a flow collected. These contain your customers' personal information. |
+| **Allow AI assistants** | On | Anyone in the workspace can connect an assistant to their own account. It can read flows, runs, campaigns and usage, and it changes nothing unless one of the switches below is also on. |
+| **Allow conversation content** | On | Connections may also read messages and the details a flow collected. These contain your customers' personal information. |
 
 Under **What assistants may change**:
 
 | Switch | Default | What it allows |
 | --- | --- | --- |
-| **Build and change flows** | Off | Create flows, change their cards, rehearse them and switch them on. A live flow is never changed in place, and switching a flow on needs your yes. |
-| **Reply to customers and manage conversations** | Off | Reply to customers, text someone first, assign conversations, take over from the AI, and book, move or cancel meetings. Replies reach your customers as soon as they're sent. |
-| **Create and launch campaigns** | Off | Create campaigns, add and tag leads, and launch, pause or cancel a campaign. Before a launch, the assistant must show you a summary. |
-| **Invite and manage team members** | Off | Invite managers and agents, change their role and deactivate them. Nobody can be made an admin this way. |
-| **Create email addresses** | Off | Create new email addresses on Send4. Assistants never see a mailbox password: you connect your own mailbox yourself, on the **Email addresses** page. |
+| **Build and change flows** | On | Create flows, change their cards, rehearse them and switch them on. A live flow is never changed in place, and switching a flow on needs your yes. |
+| **Reply to customers and manage conversations** | On | Reply to customers, text someone first, assign conversations, take over from the AI, and book, move or cancel meetings. Replies reach your customers as soon as they're sent. |
+| **Create and launch campaigns** | On | Create campaigns, add and tag leads, and launch, pause or cancel a campaign. Before a launch, the assistant must show you a summary. |
+| **Invite and manage team members** | On | Invite managers and agents, change their role and deactivate them. Nobody can be made an admin this way. |
+| **Create email addresses** | On | Create new email addresses on Send4. Assistants never see a mailbox password: you connect your own mailbox yourself, on the **Email addresses** page. |
 
 When you turn off **Allow AI assistants** and select **Switch off**, every assistant in the
 workspace is disconnected at once. Nobody can connect one until an admin switches it on again.
 
-## What you tick when you connect
+## What you choose when you connect
 
 The Send4 sign-in screen shows the account you're signed in to, and only the choices your role
-and your workspace allow:
+and your workspace allow, already ticked. Untick what this assistant shouldn't do:
 
 | Choice | What the assistant may then do |
 | --- | --- |
@@ -48,7 +49,7 @@ and your workspace allow:
 | **Invite and manage team members** | Invite people to the workspace as managers or agents, change their role, and deactivate them. |
 | **Create email addresses** | Create new email addresses for the workspace on Send4. |
 
-To change what you ticked, disconnect the assistant and connect it again.
+To change what you chose, disconnect the assistant and connect it again.
 
 ## Who can use what
 
