@@ -15,6 +15,7 @@
   <img src="https://img.shields.io/badge/sign--in-OAuth-059669" alt="Sign-in: OAuth">
   <img src="https://img.shields.io/badge/hosted-mcp.send4.ai-0F172A" alt="Hosted at mcp.send4.ai">
   <a href="https://registry.modelcontextprotocol.io/v0.1/servers?search=ai.send4/mcp"><img src="https://img.shields.io/badge/MCP_Registry-ai.send4%2Fmcp-059669" alt="MCP Registry: ai.send4/mcp"></a>
+  <a href="https://glama.ai/mcp/connectors/ai.send4/mcp"><img src="https://glama.ai/mcp/connectors/ai.send4/mcp/badges/score.svg" alt="Send4 MCP connector on Glama"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-0F172A" alt="License: MIT"></a>
 </p>
 
